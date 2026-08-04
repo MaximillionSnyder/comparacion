@@ -1,4 +1,5 @@
 import CharacterCard from './CharacterCard';
+import AptitudPanel from './AptitudPanel';
 import type { Arbol, PosicionNodo } from '../../types';
 
 interface PedigreeTreeProps {
@@ -101,6 +102,8 @@ export default function PedigreeTree({
           </span>
         </div>
       </div>
+
+      <AptitudPanel arbol={arbol} />
 
       <div className="overflow-x-auto pb-4">
         <div className="flex flex-col items-center gap-1 p-2 min-w-[760px]">
