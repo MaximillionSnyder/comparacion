@@ -1,7 +1,7 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import { Capacitor } from '@capacitor/core';
 import { useAptitudCalc } from '../../hooks/useAptitudCalc';
-import { TIPOS_APTITUD, GRADES, getSubida, calcularAptitud } from '../../utils/aptitudCalculator';
+import { GRADES } from '../../utils/aptitudCalculator';
 import type { Arbol } from '../../types';
 import type { TipoAptitudResultado } from '../../utils/aptitudCalculator';
 
@@ -34,7 +34,6 @@ function GradeBadge({ n }: { n: number }) {
 }
 
 function FilaAptitud({ r }: { r: TipoAptitudResultado }) {
-  const misma = r.base === r.final;
   return (
     <div className={`flex items-center gap-2 py-1.5 px-2 rounded-lg text-sm ${r.mejora ? 'bg-rose-500/5' : ''}`}>
       <span className="w-28 truncate text-gray-400 text-xs">{r.label}</span>
