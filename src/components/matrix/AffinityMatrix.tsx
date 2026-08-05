@@ -2,8 +2,8 @@ import { useMemo } from 'react';
 import AffinityBadge from './AffinityBadge';
 import type { Arbol, RangoAfinidad } from '../../types';
 import { POSICIONES_ANCESTROS, POS_LABELS } from '../../types';
-import affinityMatrix from '../../data/affinityMatrix.json';
-import { getRango } from '../../utils/affinityCalculator';
+import { getAffinityScore, getRango } from '../../utils/affinityCalculator';
+import { getPersonajeNombre } from '../../utils/characterLabels';
 
 interface AffinityMatrixProps {
   arbol: Arbol;
@@ -47,7 +47,7 @@ export default function AffinityMatrix({ arbol }: AffinityMatrixProps) {
 
   const getAffinity = (idA: string, idB: string): { puntuacion: number; rango: RangoAfinidad } => {
     if (idA === idB) return { puntuacion: 100, rango: '◎' };
-    const p = (affinityMatrix as Record<string, Record<string, number>>)[idA]?.[idB] ?? 30;
+    const p = getAffinityScore(idA, idB);
     return { puntuacion: p, rango: getRango(p) };
   };
 
@@ -68,7 +68,7 @@ export default function AffinityMatrix({ arbol }: AffinityMatrixProps) {
                     className="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-[11px] ring-2 ring-white/10"
                     style={{ backgroundColor: c.avatarColor }}
                   >
-                    {c.nombre.slice(0, 1)}
+                    {getPersonajeNombre(c).slice(0, 1)}
                   </div>
                   <span className="text-[10px] text-gray-500 font-semibold">
                     {i === 0 ? 'Obj' : ancestros[i - 1]?.label ?? ''}
@@ -90,10 +90,10 @@ export default function AffinityMatrix({ arbol }: AffinityMatrixProps) {
                       className="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-[11px] shrink-0 ring-2 ring-white/10"
                       style={{ backgroundColor: rowChar.avatarColor }}
                     >
-                      {rowChar.nombre.slice(0, 1)}
+                      {getPersonajeNombre(rowChar).slice(0, 1)}
                     </div>
                     <div className="min-w-0">
-                      <div className="text-gray-100 font-medium truncate max-w-[100px] text-xs">{rowChar.nombre}</div>
+                      <div className="text-gray-100 font-medium truncate max-w-[100px] text-xs">{getPersonajeNombre(rowChar)}</div>
                       <div className="text-[10px] text-gray-500">{label}</div>
                     </div>
                   </div>

@@ -34,6 +34,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Validate data
+        run: npm run validate-data
+
+      - name: Test domain rules
+        run: npm test
+
       - name: Build web app
         run: npm run build
 
@@ -52,6 +58,8 @@ jobs:
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+          VERSION_CODE: ${{ github.run_number }}
+          VERSION_NAME: ${{ github.ref_name }}
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4

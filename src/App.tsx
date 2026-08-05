@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { App as CapApp } from '@capacitor/app';
 import { Capacitor } from '@capacitor/core';
 import PedigreeTree from './components/tree/PedigreeTree';
@@ -7,10 +7,12 @@ import CharacterSelectorModal from './components/modals/CharacterSelectorModal';
 import FactorEditorModal from './components/modals/FactorEditorModal';
 import { usePedigreeTree } from './hooks/usePedigreeTree';
 import { useAffinityCalc } from './hooks/useAffinityCalc';
+import { CONFLICT_SLOTS } from './data/pedigreeConfig';
 import {
   FACTOR_AZUL_VACIO, FACTOR_ROJO_VACIO, FACTOR_VERDE_VACIO,
-  POSICIONES_TODAS, POS_LABELS,
+  POS_LABELS,
 } from './types';
+import { getPersonajeNombre } from './utils/characterLabels';
 import type { PosicionNodo } from './types';
 
 function App() {
@@ -64,98 +66,6 @@ function App() {
     window.addEventListener('beforeunload', onBeforeUnload);
     return () => window.removeEventListener('beforeunload', onBeforeUnload);
   }, []);
-
-  const excludeForSlot = useMemo((): Record<PosicionNodo, string[]> => {
-    const id = (pos: PosicionNodo) => arbol[pos].personaje?.id;
-    const add = (...ids: (string | undefined)[]) =>
-      [...new Set(ids.filter((x): x is string => !!x))];
-
-    const obj = id('objetivo');
-    const padre = id('padre');
-    const madre = id('madre');
-
-    const pair: [PosicionNodo, PosicionNodo][] = [
-      ['padre', 'madre'],
-      ['abueloPaterno', 'abuelaPaterna'],
-      ['abueloMaterno', 'abuelaMaterna'],
-      ['bisAbueloPP', 'bisAbuelaPP'],
-      ['bisAbueloPM', 'bisAbuelaPM'],
-      ['bisAbueloMP', 'bisAbuelaMP'],
-      ['bisAbueloMM', 'bisAbuelaMM'],
-    ];
-
-    const sameBranchBlock: Record<PosicionNodo, PosicionNodo[]> = {
-      objetivo: [],
-      padre: ['abueloPaterno', 'abuelaPaterna', 'bisAbueloPP', 'bisAbuelaPP', 'bisAbueloPM', 'bisAbuelaPM'],
-      madre: ['abueloMaterno', 'abuelaMaterna', 'bisAbueloMP', 'bisAbuelaMP', 'bisAbueloMM', 'bisAbuelaMM'],
-      abueloPaterno: ['padre', 'bisAbueloPP', 'bisAbuelaPP'],
-      abuelaPaterna: ['padre', 'bisAbueloPM', 'bisAbuelaPM'],
-      abueloMaterno: ['madre', 'bisAbueloMP', 'bisAbuelaMP'],
-      abuelaMaterna: ['madre', 'bisAbueloMM', 'bisAbuelaMM'],
-      bisAbueloPP: ['abueloPaterno'],
-      bisAbuelaPP: ['abueloPaterno'],
-      bisAbueloPM: ['abuelaPaterna'],
-      bisAbuelaPM: ['abuelaPaterna'],
-      bisAbueloMP: ['abueloMaterno'],
-      bisAbuelaMP: ['abueloMaterno'],
-      bisAbueloMM: ['abuelaMaterna'],
-      bisAbuelaMM: ['abuelaMaterna'],
-    };
-
-    const result = {} as Record<PosicionNodo, string[]>;
-
-    for (const pos of POSICIONES_TODAS) {
-      const blocked: string[] = [];
-      for (const [a, b] of pair) {
-        if (pos === a && id(b)) blocked.push(id(b)!);
-        if (pos === b && id(a)) blocked.push(id(a)!);
-      }
-      for (const other of sameBranchBlock[pos] ?? []) {
-        const oid = id(other);
-        if (oid) blocked.push(oid);
-      }
-      if ((pos === 'padre' || pos === 'madre') && obj) blocked.push(obj);
-      if (pos === 'objetivo') {
-        if (padre) blocked.push(padre);
-        if (madre) blocked.push(madre);
-      }
-      result[pos] = add(...blocked);
-    }
-
-    return result;
-  }, [arbol]);
-
-  const conflictSlots = (pos: PosicionNodo): PosicionNodo[] => {
-    const pairMap: Partial<Record<PosicionNodo, PosicionNodo>> = {
-      padre: 'madre', madre: 'padre',
-      abueloPaterno: 'abuelaPaterna', abuelaPaterna: 'abueloPaterno',
-      abueloMaterno: 'abuelaMaterna', abuelaMaterna: 'abueloMaterno',
-      bisAbueloPP: 'bisAbuelaPP', bisAbuelaPP: 'bisAbueloPP',
-      bisAbueloPM: 'bisAbuelaPM', bisAbuelaPM: 'bisAbueloPM',
-      bisAbueloMP: 'bisAbuelaMP', bisAbuelaMP: 'bisAbueloMP',
-      bisAbueloMM: 'bisAbuelaMM', bisAbuelaMM: 'bisAbueloMM',
-    };
-    const branch: Record<PosicionNodo, PosicionNodo[]> = {
-      objetivo: ['padre', 'madre'],
-      padre: ['objetivo', 'madre', 'abueloPaterno', 'abuelaPaterna', 'bisAbueloPP', 'bisAbuelaPP', 'bisAbueloPM', 'bisAbuelaPM'],
-      madre: ['objetivo', 'padre', 'abueloMaterno', 'abuelaMaterna', 'bisAbueloMP', 'bisAbuelaMP', 'bisAbueloMM', 'bisAbuelaMM'],
-      abueloPaterno: ['padre', 'abuelaPaterna', 'bisAbueloPP', 'bisAbuelaPP'],
-      abuelaPaterna: ['padre', 'abueloPaterno', 'bisAbueloPM', 'bisAbuelaPM'],
-      abueloMaterno: ['madre', 'abuelaMaterna', 'bisAbueloMP', 'bisAbuelaMP'],
-      abuelaMaterna: ['madre', 'abueloMaterno', 'bisAbueloMM', 'bisAbuelaMM'],
-      bisAbueloPP: ['abueloPaterno', 'bisAbuelaPP'],
-      bisAbuelaPP: ['abueloPaterno', 'bisAbueloPP'],
-      bisAbueloPM: ['abuelaPaterna', 'bisAbuelaPM'],
-      bisAbuelaPM: ['abuelaPaterna', 'bisAbueloPM'],
-      bisAbueloMP: ['abueloMaterno', 'bisAbuelaMP'],
-      bisAbuelaMP: ['abueloMaterno', 'bisAbueloMP'],
-      bisAbueloMM: ['abuelaMaterna', 'bisAbuelaMM'],
-      bisAbuelaMM: ['abuelaMaterna', 'bisAbueloMM'],
-    };
-    const list = [...(branch[pos] ?? [])];
-    if (pairMap[pos]) list.push(pairMap[pos]!);
-    return [...new Set(list)];
-  };
 
   return (
     <div className="min-h-screen text-white">
@@ -236,14 +146,18 @@ function App() {
         onClose={() => setModalSelector(null)}
         onSelect={(char) => {
           if (!modalSelector) return;
-          for (const s of conflictSlots(modalSelector)) {
+          for (const s of CONFLICT_SLOTS[modalSelector]) {
             if (arbol[s].personaje?.id === char.id) clearPersonaje(s);
           }
           setPersonaje(modalSelector, char);
           if (modalSelector === 'objetivo') autoFillFactores('objetivo');
         }}
         posicion={modalSelector ? POS_LABELS[modalSelector] : ''}
-        excludeIds={modalSelector ? (excludeForSlot[modalSelector] || []) : []}
+        excludeIds={modalSelector
+          ? CONFLICT_SLOTS[modalSelector]
+            .map((pos) => arbol[pos].personaje?.id)
+            .filter((id): id is string => !!id)
+          : []}
       />
 
       <FactorEditorModal
@@ -253,7 +167,9 @@ function App() {
         factorAzul={modalFactor ? arbol[modalFactor].factorAzul : FACTOR_AZUL_VACIO}
         factorRojo={modalFactor ? arbol[modalFactor].factorRojo : FACTOR_ROJO_VACIO}
         factorVerde={modalFactor ? arbol[modalFactor].factorVerde : FACTOR_VERDE_VACIO}
-        personajeName={modalFactor ? arbol[modalFactor].personaje?.nombre : undefined}
+        personajeName={modalFactor && arbol[modalFactor].personaje
+          ? getPersonajeNombre(arbol[modalFactor].personaje)
+          : undefined}
         onSetAzul={(pos, factor) => setFactorAzul(pos, factor)}
         onSetRojo={(pos, factor) => setFactorRojo(pos, factor)}
         onSetVerde={(pos, factor) => setFactorVerde(pos, factor)}

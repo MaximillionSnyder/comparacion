@@ -1,6 +1,7 @@
 import { useState, useMemo, useEffect, useRef } from 'react';
 import type { Personaje } from '../../types';
 import characters from '../../data/characters.json';
+import { getPersonajeNombre, getPersonajeSearchText } from '../../utils/characterLabels';
 
 interface CharacterSelectorModalProps {
   open: boolean;
@@ -11,18 +12,22 @@ interface CharacterSelectorModalProps {
 }
 
 const DIST_LABEL: Record<string, string> = {
-  short: 'Corta',
-  mile: 'Milla',
-  medium: 'Media',
-  long: 'Larga',
+  sprint: 'Sprint',
+  mile: 'Mile',
+  medium: 'Medium',
+  long: 'Long',
 };
 
 const ESTILO_LABEL: Record<string, string> = {
-  leader: 'Leader',
-  frontrunner: 'Frontrunner',
-  betweener: 'Betweener',
-  chaser: 'Chaser',
+  front: 'Front',
+  pace: 'Pace',
+  late: 'Late',
+  end: 'End',
 };
+
+function normalizeSearch(value: string): string {
+  return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+}
 
 export default function CharacterSelectorModal({
   open, onClose, onSelect, posicion, excludeIds = [],
@@ -55,8 +60,8 @@ export default function CharacterSelectorModal({
   const filtered = useMemo(() => {
     let list = characters as Personaje[];
     if (search) {
-      const q = search.toLowerCase();
-      list = list.filter((c) => c.nombre.toLowerCase().includes(q));
+      const q = normalizeSearch(search);
+      list = list.filter((c) => normalizeSearch(getPersonajeSearchText(c)).includes(q));
     }
     if (fDistancia) list = list.filter((c) => c.distancia === fDistancia);
     if (fEstilo) list = list.filter((c) => c.estilo === fEstilo);
@@ -111,10 +116,10 @@ export default function CharacterSelectorModal({
               className="flex-1 px-2.5 py-2 bg-gray-800 border border-gray-700 rounded-xl text-gray-300 text-xs focus:outline-none focus:border-violet-500"
             >
               <option value="">Toda distancia</option>
-              <option value="short">Corta</option>
-              <option value="mile">Milla</option>
-              <option value="medium">Media</option>
-              <option value="long">Larga</option>
+              <option value="sprint">Sprint</option>
+              <option value="mile">Mile</option>
+              <option value="medium">Medium</option>
+              <option value="long">Long</option>
             </select>
             <select
               value={fEstilo}
@@ -122,10 +127,10 @@ export default function CharacterSelectorModal({
               className="flex-1 px-2.5 py-2 bg-gray-800 border border-gray-700 rounded-xl text-gray-300 text-xs focus:outline-none focus:border-violet-500"
             >
               <option value="">Todo estilo</option>
-              <option value="leader">Leader</option>
-              <option value="frontrunner">Frontrunner</option>
-              <option value="betweener">Betweener</option>
-              <option value="chaser">Chaser</option>
+              <option value="front">Front</option>
+              <option value="pace">Pace</option>
+              <option value="late">Late</option>
+              <option value="end">End</option>
             </select>
           </div>
           <p className="text-[10px] text-gray-500 mt-2">{filtered.length} personaje{filtered.length !== 1 ? 's' : ''}</p>
@@ -158,11 +163,11 @@ export default function CharacterSelectorModal({
                       className="w-11 h-11 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0 ring-2 ring-white/10"
                       style={{ backgroundColor: char.avatarColor }}
                     >
-                      {char.nombre.slice(0, 2).toUpperCase()}
+                        {getPersonajeNombre(char).slice(0, 2).toUpperCase()}
                     </div>
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center gap-1.5">
-                        <span className="text-sm text-white font-semibold truncate">{char.nombre}</span>
+                        <span className="text-sm text-white font-semibold truncate">{getPersonajeNombre(char)}</span>
                         {blocked && (
                           <span className="text-[9px] px-1.5 py-0.5 rounded bg-red-500/15 text-red-400 shrink-0">
                             Ocupado

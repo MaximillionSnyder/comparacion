@@ -21,29 +21,29 @@ export interface TipoAptitudResultado {
 }
 
 export const MAPA_TIPO_ROJO_A_APTITUD: Record<TipoFactorRojo, keyof Adaptabilidad> = {
-  '芝': 'turf',
-  'ダート': 'dirt',
-  '短距離': 'short',
-  'マイル': 'mile',
-  '中距離': 'medium',
-  '長距離': 'long',
-  '逃げ': 'leader',
-  '先行': 'frontrunner',
-  '差し': 'betweener',
-  '追込': 'chaser',
+  turf: 'turf',
+  dirt: 'dirt',
+  sprint: 'sprint',
+  mile: 'mile',
+  medium: 'medium',
+  long: 'long',
+  front: 'front',
+  pace: 'pace',
+  late: 'late',
+  end: 'end',
 };
 
 export const TIPOS_APTITUD: { tipo: TipoFactorRojo; label: string }[] = [
-  { tipo: '芝', label: '芝 (Turf)' },
-  { tipo: 'ダート', label: 'ダート (Dirt)' },
-  { tipo: '短距離', label: '短距離 (Short)' },
-  { tipo: 'マイル', label: 'マイル (Mile)' },
-  { tipo: '中距離', label: '中距離 (Medium)' },
-  { tipo: '長距離', label: '長距離 (Long)' },
-  { tipo: '逃げ', label: '逃げ (Leader)' },
-  { tipo: '先行', label: '先行 (Frontrunner)' },
-  { tipo: '差し', label: '差し (Betweener)' },
-  { tipo: '追込', label: '追込 (Chaser)' },
+  { tipo: 'turf', label: 'Turf' },
+  { tipo: 'dirt', label: 'Dirt' },
+  { tipo: 'sprint', label: 'Sprint' },
+  { tipo: 'mile', label: 'Mile' },
+  { tipo: 'medium', label: 'Medium' },
+  { tipo: 'long', label: 'Long' },
+  { tipo: 'front', label: 'Front' },
+  { tipo: 'pace', label: 'Pace' },
+  { tipo: 'late', label: 'Late' },
+  { tipo: 'end', label: 'End' },
 ];
 
 export function getSubida(estrellas: number): number {
@@ -63,8 +63,8 @@ export function calcularAptitud(arbol: Arbol): ResultadoAptitud {
   }
 
   const estrellasPorTipo: Record<TipoFactorRojo, number> = {
-    '芝': 0, 'ダート': 0, '短距離': 0, 'マイル': 0, '中距離': 0,
-    '長距離': 0, '逃げ': 0, '先行': 0, '差し': 0, '追込': 0,
+    turf: 0, dirt: 0, sprint: 0, mile: 0, medium: 0,
+    long: 0, front: 0, pace: 0, late: 0, end: 0,
   };
 
   for (const pos of POSICIONES_HERENCIA) {

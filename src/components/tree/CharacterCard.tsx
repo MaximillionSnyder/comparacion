@@ -1,5 +1,6 @@
 import type { Nodo, PosicionNodo } from '../../types';
-import { TIPOS_AZUL_LABEL } from '../../types';
+import { TIPOS_AZUL_LABEL, TIPOS_ROJO_LABEL } from '../../types';
+import { getPersonajeNombre } from '../../utils/characterLabels';
 
 interface CharacterCardProps {
   nodo: Nodo;
@@ -23,7 +24,8 @@ export default function CharacterCard({
   onSelect, onEditFactor, onClear,
 }: CharacterCardProps) {
   const { personaje, factorAzul, factorRojo, factorVerde } = nodo;
-  const iniciales = personaje ? personaje.nombre.slice(0, 2).toUpperCase() : '+';
+  const nombre = personaje ? getPersonajeNombre(personaje) : '';
+  const iniciales = personaje ? nombre.slice(0, 2).toUpperCase() : '+';
   const tieneFactores =
     factorAzul.estrellas > 0 ||
     factorRojo.estrellas > 0 ||
@@ -82,7 +84,7 @@ export default function CharacterCard({
               {iniciales}
             </div>
             <span className={`${size.name} text-gray-100 font-semibold leading-tight text-center line-clamp-2 px-0.5`}>
-              {personaje.nombre}
+              {nombre}
             </span>
 
             {tieneFactores && (
@@ -94,7 +96,7 @@ export default function CharacterCard({
                 )}
                 {factorRojo.estrellas > 0 && (
                   <span className={`${size.factor} rounded-md bg-rose-500/15 text-rose-300 border border-rose-400/25 text-center truncate font-medium`}>
-                    {factorRojo.tipo} {'★'.repeat(factorRojo.estrellas)}
+                    {TIPOS_ROJO_LABEL[factorRojo.tipo]} {'★'.repeat(factorRojo.estrellas)}
                   </span>
                 )}
                 {!compact && factorVerde.estrellas > 0 && factorVerde.nombre && (

@@ -2,6 +2,16 @@ import affinityMatrix from '../data/affinityMatrix.json';
 import type { Arbol, PosicionNodo, RangoAfinidad, ResultadoAfinidad } from '../types';
 import { POSICIONES_ANCESTROS } from '../types';
 
+const affinityValues = affinityMatrix as Record<string, Record<string, number>>;
+
+export function getAffinityScore(idA: string, idB: string): number {
+  const score = affinityValues[idA]?.[idB];
+  if (!Number.isFinite(score)) {
+    throw new Error(`Missing affinity score for ${idA} -> ${idB}`);
+  }
+  return score;
+}
+
 function bonusFactores(arbol: Arbol, posicion: PosicionNodo): number {
   const target = arbol.objetivo;
   const ancestro = arbol[posicion];
@@ -50,7 +60,7 @@ export function calcularAfinidad(arbol: Arbol): ResultadoAfinidad {
     if (!nodo.personaje) continue;
     ancestrosConPersonaje++;
 
-    const basePareja = (affinityMatrix as Record<string, Record<string, number>>)[targetId]?.[nodo.personaje.id] ?? 30;
+    const basePareja = getAffinityScore(targetId, nodo.personaje.id);
     baseTotal += basePareja;
 
     const bf = bonusFactores(arbol, pos);

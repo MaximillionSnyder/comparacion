@@ -1,9 +1,17 @@
+export type Locale = 'es' | 'en' | 'ja';
+
+export interface LocalizedText {
+  es: string;
+  en: string;
+  ja: string;
+}
+
 export type TipoFactorAzul = 'speed' | 'stamina' | 'power' | 'guts' | 'wit';
 
 export type TipoFactorRojo =
-  | '芝' | 'ダート'
-  | '短距離' | 'マイル' | '中距離' | '長距離'
-  | '逃げ' | '先行' | '差し' | '追込';
+  | 'turf' | 'dirt'
+  | 'sprint' | 'mile' | 'medium' | 'long'
+  | 'front' | 'pace' | 'late' | 'end';
 
 export interface FactorAzul {
   tipo: TipoFactorAzul;
@@ -29,22 +37,23 @@ export interface FactoresDefault {
 export interface Adaptabilidad {
   turf: 0 | 1 | 2 | 3;
   dirt: 0 | 1 | 2 | 3;
-  short: 0 | 1 | 2 | 3;
+  sprint: 0 | 1 | 2 | 3;
   mile: 0 | 1 | 2 | 3;
   medium: 0 | 1 | 2 | 3;
   long: 0 | 1 | 2 | 3;
-  leader: 0 | 1 | 2 | 3;
-  frontrunner: 0 | 1 | 2 | 3;
-  betweener: 0 | 1 | 2 | 3;
-  chaser: 0 | 1 | 2 | 3;
+  front: 0 | 1 | 2 | 3;
+  pace: 0 | 1 | 2 | 3;
+  late: 0 | 1 | 2 | 3;
+  end: 0 | 1 | 2 | 3;
 }
 
 export interface Personaje {
   id: string;
-  nombre: string;
+  nombre: LocalizedText;
+  aliases?: string[];
   avatarColor: string;
-  distancia: 'short' | 'mile' | 'medium' | 'long';
-  estilo: 'leader' | 'frontrunner' | 'betweener' | 'chaser';
+  distancia: 'sprint' | 'mile' | 'medium' | 'long';
+  estilo: 'front' | 'pace' | 'late' | 'end';
   adaptabilidad: Adaptabilidad;
   factoresDefault: FactoresDefault;
 }
@@ -149,17 +158,21 @@ export const TIPOS_AZUL: { tipo: TipoFactorAzul; label: string }[] = [
 ];
 
 export const TIPOS_ROJO: { tipo: TipoFactorRojo; label: string }[] = [
-  { tipo: '芝', label: '芝 (Turf)' },
-  { tipo: 'ダート', label: 'ダート (Dirt)' },
-  { tipo: '短距離', label: '短距離 (Short)' },
-  { tipo: 'マイル', label: 'マイル (Mile)' },
-  { tipo: '中距離', label: '中距離 (Medium)' },
-  { tipo: '長距離', label: '長距離 (Long)' },
-  { tipo: '逃げ', label: '逃げ (Leader)' },
-  { tipo: '先行', label: '先行 (Frontrunner)' },
-  { tipo: '差し', label: '差し (Betweener)' },
-  { tipo: '追込', label: '追込 (Chaser)' },
+  { tipo: 'turf', label: 'Turf' },
+  { tipo: 'dirt', label: 'Dirt' },
+  { tipo: 'sprint', label: 'Sprint' },
+  { tipo: 'mile', label: 'Mile' },
+  { tipo: 'medium', label: 'Medium' },
+  { tipo: 'long', label: 'Long' },
+  { tipo: 'front', label: 'Front' },
+  { tipo: 'pace', label: 'Pace' },
+  { tipo: 'late', label: 'Late' },
+  { tipo: 'end', label: 'End' },
 ];
+
+export const TIPOS_ROJO_LABEL: Record<TipoFactorRojo, string> = Object.fromEntries(
+  TIPOS_ROJO.map(({ tipo, label }) => [tipo, label]),
+) as Record<TipoFactorRojo, string>;
 
 export const TIPOS_AZUL_LABEL: Record<TipoFactorAzul, string> = {
   speed: 'Speed',
@@ -170,5 +183,5 @@ export const TIPOS_AZUL_LABEL: Record<TipoFactorAzul, string> = {
 };
 
 export const FACTOR_AZUL_VACIO: FactorAzul = { tipo: 'speed', estrellas: 0 };
-export const FACTOR_ROJO_VACIO: FactorRojo = { tipo: '芝', estrellas: 0 };
+export const FACTOR_ROJO_VACIO: FactorRojo = { tipo: 'turf', estrellas: 0 };
 export const FACTOR_VERDE_VACIO: FactorVerde = { nombre: '', estrellas: 0 };
