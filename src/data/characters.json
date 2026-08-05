@@ -1,22 +1,2422 @@
 [
-  { "id":"spe","nombre":{"es":"Special Week","en":"Special Week","ja":"スペシャルウィーク"},"avatarColor":"#E74C3C","distancia":"medium","estilo":"front","adaptabilidad":{"turf":3,"dirt":1,"sprint":0,"mile":2,"medium":3,"long":1,"front":3,"pace":1,"late":0,"end":0},"factoresDefault":{"azul":{"tipo":"speed","estrellas":3},"rojo":{"tipo":"medium","estrellas":2},"verde":{"nombre":"日本一のウマ娘","estrellas":2}} },
-  { "id":"suzu","nombre":{"es":"Silence Suzuka","en":"Silence Suzuka","ja":"サイレンススズカ"},"avatarColor":"#3498DB","distancia":"medium","estilo":"pace","adaptabilidad":{"turf":3,"dirt":0,"sprint":0,"mile":2,"medium":3,"long":1,"front":0,"pace":3,"late":0,"end":0},"factoresDefault":{"azul":{"tipo":"stamina","estrellas":2},"rojo":{"tipo":"turf","estrellas":3},"verde":{"nombre":"異次元の逃亡者","estrellas":3}} },
-  { "id":"teio","nombre":{"es":"Tokai Teio","en":"Tokai Teio","ja":"トウカイテイオー"},"avatarColor":"#E91E63","distancia":"medium","estilo":"front","adaptabilidad":{"turf":2,"dirt":1,"sprint":0,"mile":2,"medium":3,"long":1,"front":3,"pace":0,"late":0,"end":0},"factoresDefault":{"azul":{"tipo":"power","estrellas":2},"rojo":{"tipo":"medium","estrellas":3},"verde":{"nombre":"絶対はボクだ","estrellas":2}} },
-  { "id":"mcq","nombre":{"es":"Mejiro McQueen","en":"Mejiro McQueen","ja":"メジロマックイーン"},"avatarColor":"#9B59B6","distancia":"long","estilo":"front","adaptabilidad":{"turf":2,"dirt":0,"sprint":0,"mile":1,"medium":2,"long":3,"front":3,"pace":0,"late":0,"end":0},"factoresDefault":{"azul":{"tipo":"stamina","estrellas":3},"rojo":{"tipo":"long","estrellas":3},"verde":{"nombre":"名優の証明","estrellas":2}} },
-  { "id":"el","nombre":{"es":"El Condor Pasa","en":"El Condor Pasa","ja":"エルコンドルパサー"},"avatarColor":"#F39C12","distancia":"mile","estilo":"pace","adaptabilidad":{"turf":2,"dirt":1,"sprint":0,"mile":3,"medium":2,"long":1,"front":1,"pace":3,"late":0,"end":0},"factoresDefault":{"azul":{"tipo":"speed","estrellas":3},"rojo":{"tipo":"mile","estrellas":2},"verde":{"nombre":"プランチャ☆ガナドール","estrellas":2}} },
-  { "id":"grass","nombre":{"es":"Grass Wonder","en":"Grass Wonder","ja":"グラスワンダー"},"avatarColor":"#27AE60","distancia":"medium","estilo":"late","adaptabilidad":{"turf":3,"dirt":0,"sprint":0,"mile":2,"medium":3,"long":1,"front":0,"pace":0,"late":3,"end":1},"factoresDefault":{"azul":{"tipo":"wit","estrellas":2},"rojo":{"tipo":"medium","estrellas":2},"verde":{"nombre":"一意専心","estrellas":2}} },
-  { "id":"oguri","nombre":{"es":"Oguri Cap","en":"Oguri Cap","ja":"オグリキャップ"},"avatarColor":"#95A5A6","distancia":"medium","estilo":"front","adaptabilidad":{"turf":2,"dirt":2,"sprint":0,"mile":2,"medium":3,"long":1,"front":3,"pace":1,"late":0,"end":0},"factoresDefault":{"azul":{"tipo":"power","estrellas":3},"rojo":{"tipo":"medium","estrellas":2},"verde":{"nombre":"クールスター","estrellas":2}} },
-  { "id":"rudolf","nombre":{"es":"Symboli Rudolf","en":"Symboli Rudolf","ja":"シンボリルドルフ"},"avatarColor":"#1ABC9C","distancia":"long","estilo":"front","adaptabilidad":{"turf":3,"dirt":0,"sprint":0,"mile":1,"medium":2,"long":3,"front":3,"pace":0,"late":0,"end":0},"factoresDefault":{"azul":{"tipo":"stamina","estrellas":3},"rojo":{"tipo":"long","estrellas":2},"verde":{"nombre":"皇帝の威光","estrellas":3}} },
-  { "id":"maru","nombre":{"es":"Maruzensky","en":"Maruzensky","ja":"マルゼンスキー"},"avatarColor":"#E67E22","distancia":"mile","estilo":"pace","adaptabilidad":{"turf":2,"dirt":0,"sprint":1,"mile":3,"medium":1,"long":0,"front":0,"pace":3,"late":0,"end":0},"factoresDefault":{"azul":{"tipo":"speed","estrellas":2},"rojo":{"tipo":"mile","estrellas":3},"verde":{"nombre":"LP1211-M","estrellas":2}} },
-  { "id":"scarlet","nombre":{"es":"Daiwa Scarlet","en":"Daiwa Scarlet","ja":"ダイワスカーレット"},"avatarColor":"#C0392B","distancia":"mile","estilo":"pace","adaptabilidad":{"turf":2,"dirt":0,"sprint":0,"mile":3,"medium":2,"long":1,"front":0,"pace":3,"late":0,"end":0},"factoresDefault":{"azul":{"tipo":"stamina","estrellas":2},"rojo":{"tipo":"mile","estrellas":3},"verde":{"nombre":"紅のキズナ","estrellas":2}} },
-  { "id":"vodka","nombre":{"es":"Vodka","en":"Vodka","ja":"ウオッカ"},"avatarColor":"#2980B9","distancia":"mile","estilo":"late","adaptabilidad":{"turf":2,"dirt":1,"sprint":0,"mile":3,"medium":2,"long":0,"front":0,"pace":1,"late":3,"end":0},"factoresDefault":{"azul":{"tipo":"speed","estrellas":2},"rojo":{"tipo":"turf","estrellas":2},"verde":{"nombre":"ロードオブヴァラー","estrellas":2}} },
-  { "id":"gold","nombre":{"es":"Gold Ship","en":"Gold Ship","ja":"ゴールドシップ"},"avatarColor":"#F1C40F","distancia":"long","estilo":"end","adaptabilidad":{"turf":2,"dirt":1,"sprint":0,"mile":0,"medium":2,"long":3,"front":0,"pace":0,"late":0,"end":3},"factoresDefault":{"azul":{"tipo":"guts","estrellas":3},"rojo":{"tipo":"long","estrellas":3},"verde":{"nombre":"不沈艦ゴルシ","estrellas":3}} },
-  { "id":"kita","nombre":{"es":"Kitasan Black","en":"Kitasan Black","ja":"キタサンブラック"},"avatarColor":"#2C3E50","distancia":"medium","estilo":"front","adaptabilidad":{"turf":3,"dirt":0,"sprint":0,"mile":2,"medium":3,"long":1,"front":3,"pace":0,"late":0,"end":0},"factoresDefault":{"azul":{"tipo":"power","estrellas":3},"rojo":{"tipo":"medium","estrellas":3},"verde":{"nombre":"勝負のキタサン","estrellas":2}} },
-  { "id":"sato","nombre":{"es":"Satono Diamond","en":"Satono Diamond","ja":"サトノダイヤモンド"},"avatarColor":"#8E44AD","distancia":"long","estilo":"front","adaptabilidad":{"turf":3,"dirt":0,"sprint":0,"mile":1,"medium":2,"long":3,"front":3,"pace":0,"late":0,"end":0},"factoresDefault":{"azul":{"tipo":"stamina","estrellas":3},"rojo":{"tipo":"long","estrellas":3},"verde":{"nombre":"キラメキダイヤ","estrellas":2}} },
-  { "id":"taiki","nombre":{"es":"Taiki Shuttle","en":"Taiki Shuttle","ja":"タイキシャトル"},"avatarColor":"#D35400","distancia":"sprint","estilo":"pace","adaptabilidad":{"turf":1,"dirt":2,"sprint":3,"mile":2,"medium":0,"long":0,"front":0,"pace":3,"late":0,"end":0},"factoresDefault":{"azul":{"tipo":"speed","estrellas":2},"rojo":{"tipo":"sprint","estrellas":3},"verde":{"nombre":"爆走タイキ","estrellas":2}} },
-  { "id":"air","nombre":{"es":"Air Groove","en":"Air Groove","ja":"エアグルーヴ"},"avatarColor":"#16A085","distancia":"medium","estilo":"late","adaptabilidad":{"turf":2,"dirt":0,"sprint":0,"mile":2,"medium":3,"long":1,"front":0,"pace":1,"late":3,"end":0},"factoresDefault":{"azul":{"tipo":"wit","estrellas":2},"rojo":{"tipo":"medium","estrellas":3},"verde":{"nombre":"女帝の舞踏","estrellas":2}} },
-  { "id":"ryan","nombre":{"es":"Mejiro Ryan","en":"Mejiro Ryan","ja":"メジロライアン"},"avatarColor":"#7F8C8D","distancia":"medium","estilo":"end","adaptabilidad":{"turf":1,"dirt":2,"sprint":0,"mile":1,"medium":2,"long":1,"front":0,"pace":0,"late":1,"end":3},"factoresDefault":{"azul":{"tipo":"guts","estrellas":2},"rojo":{"tipo":"dirt","estrellas":3},"verde":{"nombre":"明日は私の風が吹く","estrellas":1}} },
-  { "id":"falcon","nombre":{"es":"Smart Falcon","en":"Smart Falcon","ja":"スマートファルコン"},"avatarColor":"#E74C3C","distancia":"sprint","estilo":"pace","adaptabilidad":{"turf":1,"dirt":3,"sprint":3,"mile":2,"medium":0,"long":0,"front":0,"pace":3,"late":0,"end":0},"factoresDefault":{"azul":{"tipo":"speed","estrellas":3},"rojo":{"tipo":"dirt","estrellas":2},"verde":{"nombre":"スマートファルコン","estrellas":2}} },
-  { "id":"brian","nombre":{"es":"Narita Brian","en":"Narita Brian","ja":"ナリタブライアン"},"avatarColor":"#34495E","distancia":"long","estilo":"front","adaptabilidad":{"turf":3,"dirt":0,"sprint":0,"mile":1,"medium":2,"long":3,"front":3,"pace":0,"late":0,"end":0},"factoresDefault":{"azul":{"tipo":"stamina","estrellas":3},"rojo":{"tipo":"long","estrellas":3},"verde":{"nombre":"遮二無二","estrellas":2}} },
-  { "id":"fine","nombre":{"es":"Fine Motion","en":"Fine Motion","ja":"ファインモーション"},"avatarColor":"#F78FB3","distancia":"mile","estilo":"late","adaptabilidad":{"turf":2,"dirt":0,"sprint":1,"mile":3,"medium":1,"long":0,"front":0,"pace":0,"late":3,"end":1},"factoresDefault":{"azul":{"tipo":"wit","estrellas":3},"rojo":{"tipo":"mile","estrellas":2},"verde":{"nombre":"華麗なる舞踏","estrellas":2}} }
+  {
+    "id": "spe",
+    "nombre": {
+      "es": "Special Week",
+      "en": "Special Week",
+      "ja": "スペシャルウィーク"
+    },
+    "avatarColor": "#E74C3C",
+    "distancia": "medium",
+    "estilo": "front",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 1,
+      "sprint": 0,
+      "mile": 2,
+      "medium": 3,
+      "long": 1,
+      "front": 3,
+      "pace": 1,
+      "late": 0,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "speed",
+        "estrellas": 3
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "日本一のウマ娘",
+        "estrellas": 2
+      }
+    }
+  },
+  {
+    "id": "suzu",
+    "nombre": {
+      "es": "Silence Suzuka",
+      "en": "Silence Suzuka",
+      "ja": "サイレンススズカ"
+    },
+    "avatarColor": "#3498DB",
+    "distancia": "medium",
+    "estilo": "pace",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 2,
+      "medium": 3,
+      "long": 1,
+      "front": 0,
+      "pace": 3,
+      "late": 0,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "stamina",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "turf",
+        "estrellas": 3
+      },
+      "verde": {
+        "nombre": "異次元の逃亡者",
+        "estrellas": 3
+      }
+    }
+  },
+  {
+    "id": "teio",
+    "nombre": {
+      "es": "Tokai Teio",
+      "en": "Tokai Teio",
+      "ja": "トウカイテイオー"
+    },
+    "avatarColor": "#E91E63",
+    "distancia": "medium",
+    "estilo": "front",
+    "adaptabilidad": {
+      "turf": 2,
+      "dirt": 1,
+      "sprint": 0,
+      "mile": 2,
+      "medium": 3,
+      "long": 1,
+      "front": 3,
+      "pace": 0,
+      "late": 0,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "power",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 3
+      },
+      "verde": {
+        "nombre": "絶対はボクだ",
+        "estrellas": 2
+      }
+    }
+  },
+  {
+    "id": "mcq",
+    "nombre": {
+      "es": "Mejiro McQueen",
+      "en": "Mejiro McQueen",
+      "ja": "メジロマックイーン"
+    },
+    "avatarColor": "#9B59B6",
+    "distancia": "long",
+    "estilo": "front",
+    "adaptabilidad": {
+      "turf": 2,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 1,
+      "medium": 2,
+      "long": 3,
+      "front": 3,
+      "pace": 0,
+      "late": 0,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "stamina",
+        "estrellas": 3
+      },
+      "rojo": {
+        "tipo": "long",
+        "estrellas": 3
+      },
+      "verde": {
+        "nombre": "名優の証明",
+        "estrellas": 2
+      }
+    }
+  },
+  {
+    "id": "el",
+    "nombre": {
+      "es": "El Condor Pasa",
+      "en": "El Condor Pasa",
+      "ja": "エルコンドルパサー"
+    },
+    "avatarColor": "#F39C12",
+    "distancia": "mile",
+    "estilo": "pace",
+    "adaptabilidad": {
+      "turf": 2,
+      "dirt": 1,
+      "sprint": 0,
+      "mile": 3,
+      "medium": 2,
+      "long": 1,
+      "front": 1,
+      "pace": 3,
+      "late": 0,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "speed",
+        "estrellas": 3
+      },
+      "rojo": {
+        "tipo": "mile",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "プランチャ☆ガナドール",
+        "estrellas": 2
+      }
+    }
+  },
+  {
+    "id": "grass",
+    "nombre": {
+      "es": "Grass Wonder",
+      "en": "Grass Wonder",
+      "ja": "グラスワンダー"
+    },
+    "avatarColor": "#27AE60",
+    "distancia": "medium",
+    "estilo": "late",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 2,
+      "medium": 3,
+      "long": 1,
+      "front": 0,
+      "pace": 0,
+      "late": 3,
+      "end": 1
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "wit",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "一意専心",
+        "estrellas": 2
+      }
+    }
+  },
+  {
+    "id": "oguri",
+    "nombre": {
+      "es": "Oguri Cap",
+      "en": "Oguri Cap",
+      "ja": "オグリキャップ"
+    },
+    "avatarColor": "#95A5A6",
+    "distancia": "medium",
+    "estilo": "front",
+    "adaptabilidad": {
+      "turf": 2,
+      "dirt": 2,
+      "sprint": 0,
+      "mile": 2,
+      "medium": 3,
+      "long": 1,
+      "front": 3,
+      "pace": 1,
+      "late": 0,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "power",
+        "estrellas": 3
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "クールスター",
+        "estrellas": 2
+      }
+    }
+  },
+  {
+    "id": "rudolf",
+    "nombre": {
+      "es": "Symboli Rudolf",
+      "en": "Symboli Rudolf",
+      "ja": "シンボリルドルフ"
+    },
+    "avatarColor": "#1ABC9C",
+    "distancia": "long",
+    "estilo": "front",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 1,
+      "medium": 2,
+      "long": 3,
+      "front": 3,
+      "pace": 0,
+      "late": 0,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "stamina",
+        "estrellas": 3
+      },
+      "rojo": {
+        "tipo": "long",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "皇帝の威光",
+        "estrellas": 3
+      }
+    }
+  },
+  {
+    "id": "maru",
+    "nombre": {
+      "es": "Maruzensky",
+      "en": "Maruzensky",
+      "ja": "マルゼンスキー"
+    },
+    "avatarColor": "#E67E22",
+    "distancia": "mile",
+    "estilo": "pace",
+    "adaptabilidad": {
+      "turf": 2,
+      "dirt": 0,
+      "sprint": 1,
+      "mile": 3,
+      "medium": 1,
+      "long": 0,
+      "front": 0,
+      "pace": 3,
+      "late": 0,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "speed",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "mile",
+        "estrellas": 3
+      },
+      "verde": {
+        "nombre": "LP1211-M",
+        "estrellas": 2
+      }
+    }
+  },
+  {
+    "id": "scarlet",
+    "nombre": {
+      "es": "Daiwa Scarlet",
+      "en": "Daiwa Scarlet",
+      "ja": "ダイワスカーレット"
+    },
+    "avatarColor": "#C0392B",
+    "distancia": "mile",
+    "estilo": "pace",
+    "adaptabilidad": {
+      "turf": 2,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 3,
+      "medium": 2,
+      "long": 1,
+      "front": 0,
+      "pace": 3,
+      "late": 0,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "stamina",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "mile",
+        "estrellas": 3
+      },
+      "verde": {
+        "nombre": "紅のキズナ",
+        "estrellas": 2
+      }
+    }
+  },
+  {
+    "id": "vodka",
+    "nombre": {
+      "es": "Vodka",
+      "en": "Vodka",
+      "ja": "ウオッカ"
+    },
+    "avatarColor": "#2980B9",
+    "distancia": "mile",
+    "estilo": "late",
+    "adaptabilidad": {
+      "turf": 2,
+      "dirt": 1,
+      "sprint": 0,
+      "mile": 3,
+      "medium": 2,
+      "long": 0,
+      "front": 0,
+      "pace": 1,
+      "late": 3,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "speed",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "turf",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "ロードオブヴァラー",
+        "estrellas": 2
+      }
+    }
+  },
+  {
+    "id": "gold",
+    "nombre": {
+      "es": "Gold Ship",
+      "en": "Gold Ship",
+      "ja": "ゴールドシップ"
+    },
+    "avatarColor": "#F1C40F",
+    "distancia": "long",
+    "estilo": "end",
+    "adaptabilidad": {
+      "turf": 2,
+      "dirt": 1,
+      "sprint": 0,
+      "mile": 0,
+      "medium": 2,
+      "long": 3,
+      "front": 0,
+      "pace": 0,
+      "late": 0,
+      "end": 3
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "guts",
+        "estrellas": 3
+      },
+      "rojo": {
+        "tipo": "long",
+        "estrellas": 3
+      },
+      "verde": {
+        "nombre": "不沈艦ゴルシ",
+        "estrellas": 3
+      }
+    }
+  },
+  {
+    "id": "kita",
+    "nombre": {
+      "es": "Kitasan Black",
+      "en": "Kitasan Black",
+      "ja": "キタサンブラック"
+    },
+    "avatarColor": "#2C3E50",
+    "distancia": "medium",
+    "estilo": "front",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 2,
+      "medium": 3,
+      "long": 1,
+      "front": 3,
+      "pace": 0,
+      "late": 0,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "power",
+        "estrellas": 3
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 3
+      },
+      "verde": {
+        "nombre": "勝負のキタサン",
+        "estrellas": 2
+      }
+    }
+  },
+  {
+    "id": "sato",
+    "nombre": {
+      "es": "Satono Diamond",
+      "en": "Satono Diamond",
+      "ja": "サトノダイヤモンド"
+    },
+    "avatarColor": "#8E44AD",
+    "distancia": "long",
+    "estilo": "front",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 1,
+      "medium": 2,
+      "long": 3,
+      "front": 3,
+      "pace": 0,
+      "late": 0,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "stamina",
+        "estrellas": 3
+      },
+      "rojo": {
+        "tipo": "long",
+        "estrellas": 3
+      },
+      "verde": {
+        "nombre": "キラメキダイヤ",
+        "estrellas": 2
+      }
+    }
+  },
+  {
+    "id": "taiki",
+    "nombre": {
+      "es": "Taiki Shuttle",
+      "en": "Taiki Shuttle",
+      "ja": "タイキシャトル"
+    },
+    "avatarColor": "#D35400",
+    "distancia": "sprint",
+    "estilo": "pace",
+    "adaptabilidad": {
+      "turf": 1,
+      "dirt": 2,
+      "sprint": 3,
+      "mile": 2,
+      "medium": 0,
+      "long": 0,
+      "front": 0,
+      "pace": 3,
+      "late": 0,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "speed",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "sprint",
+        "estrellas": 3
+      },
+      "verde": {
+        "nombre": "爆走タイキ",
+        "estrellas": 2
+      }
+    }
+  },
+  {
+    "id": "air",
+    "nombre": {
+      "es": "Air Groove",
+      "en": "Air Groove",
+      "ja": "エアグルーヴ"
+    },
+    "avatarColor": "#16A085",
+    "distancia": "medium",
+    "estilo": "late",
+    "adaptabilidad": {
+      "turf": 2,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 2,
+      "medium": 3,
+      "long": 1,
+      "front": 0,
+      "pace": 1,
+      "late": 3,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "wit",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 3
+      },
+      "verde": {
+        "nombre": "女帝の舞踏",
+        "estrellas": 2
+      }
+    }
+  },
+  {
+    "id": "ryan",
+    "nombre": {
+      "es": "Mejiro Ryan",
+      "en": "Mejiro Ryan",
+      "ja": "メジロライアン"
+    },
+    "avatarColor": "#7F8C8D",
+    "distancia": "medium",
+    "estilo": "end",
+    "adaptabilidad": {
+      "turf": 1,
+      "dirt": 2,
+      "sprint": 0,
+      "mile": 1,
+      "medium": 2,
+      "long": 1,
+      "front": 0,
+      "pace": 0,
+      "late": 1,
+      "end": 3
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "guts",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "dirt",
+        "estrellas": 3
+      },
+      "verde": {
+        "nombre": "明日は私の風が吹く",
+        "estrellas": 1
+      }
+    }
+  },
+  {
+    "id": "falcon",
+    "nombre": {
+      "es": "Smart Falcon",
+      "en": "Smart Falcon",
+      "ja": "スマートファルコン"
+    },
+    "avatarColor": "#E74C3C",
+    "distancia": "sprint",
+    "estilo": "pace",
+    "adaptabilidad": {
+      "turf": 1,
+      "dirt": 3,
+      "sprint": 3,
+      "mile": 2,
+      "medium": 0,
+      "long": 0,
+      "front": 0,
+      "pace": 3,
+      "late": 0,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "speed",
+        "estrellas": 3
+      },
+      "rojo": {
+        "tipo": "dirt",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "スマートファルコン",
+        "estrellas": 2
+      }
+    }
+  },
+  {
+    "id": "brian",
+    "nombre": {
+      "es": "Narita Brian",
+      "en": "Narita Brian",
+      "ja": "ナリタブライアン"
+    },
+    "avatarColor": "#34495E",
+    "distancia": "long",
+    "estilo": "front",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 1,
+      "medium": 2,
+      "long": 3,
+      "front": 3,
+      "pace": 0,
+      "late": 0,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "stamina",
+        "estrellas": 3
+      },
+      "rojo": {
+        "tipo": "long",
+        "estrellas": 3
+      },
+      "verde": {
+        "nombre": "遮二無二",
+        "estrellas": 2
+      }
+    }
+  },
+  {
+    "id": "fine",
+    "nombre": {
+      "es": "Fine Motion",
+      "en": "Fine Motion",
+      "ja": "ファインモーション"
+    },
+    "avatarColor": "#F78FB3",
+    "distancia": "mile",
+    "estilo": "late",
+    "adaptabilidad": {
+      "turf": 2,
+      "dirt": 0,
+      "sprint": 1,
+      "mile": 3,
+      "medium": 1,
+      "long": 0,
+      "front": 0,
+      "pace": 0,
+      "late": 3,
+      "end": 1
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "wit",
+        "estrellas": 3
+      },
+      "rojo": {
+        "tipo": "mile",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "華麗なる舞踏",
+        "estrellas": 2
+      }
+    }
+  },
+  {
+    "id": "copano-rickey",
+    "nombre": {
+      "es": "Copano Rickey",
+      "en": "Copano Rickey",
+      "ja": "Copano Rickey"
+    },
+    "aliases": [
+      "Copano Rickey (Eightfold ☆Fortune)"
+    ],
+    "avatarColor": "#c95c22",
+    "distancia": "mile",
+    "estilo": "front",
+    "adaptabilidad": {
+      "turf": 0,
+      "dirt": 3,
+      "sprint": 1,
+      "mile": 3,
+      "medium": 3,
+      "long": 0,
+      "front": 3,
+      "pace": 3,
+      "late": 1,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "wit",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "mile",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "bamboo-memory",
+    "nombre": {
+      "es": "Bamboo Memory",
+      "en": "Bamboo Memory",
+      "ja": "Bamboo Memory"
+    },
+    "aliases": [
+      "Bamboo Memory (Iron Ambition)"
+    ],
+    "avatarColor": "#603f83",
+    "distancia": "sprint",
+    "estilo": "late",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 3,
+      "mile": 3,
+      "medium": 1,
+      "long": 0,
+      "front": 0,
+      "pace": 0,
+      "late": 3,
+      "end": 1
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "speed",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "sprint",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "air-shakur",
+    "nombre": {
+      "es": "Air Shakur",
+      "en": "Air Shakur",
+      "ja": "Air Shakur"
+    },
+    "aliases": [
+      "Air Shakur (unsigned)"
+    ],
+    "avatarColor": "#2a5aac",
+    "distancia": "medium",
+    "estilo": "late",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 0,
+      "medium": 3,
+      "long": 3,
+      "front": 0,
+      "pace": 1,
+      "late": 3,
+      "end": 3
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "wit",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "mejiro-dober",
+    "nombre": {
+      "es": "Mejiro Dober",
+      "en": "Mejiro Dober",
+      "ja": "Mejiro Dober"
+    },
+    "aliases": [
+      "Mejiro Dober (Sapphire Sojourn)"
+    ],
+    "avatarColor": "#6431af",
+    "distancia": "mile",
+    "estilo": "late",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 3,
+      "medium": 3,
+      "long": 0,
+      "front": 1,
+      "pace": 2,
+      "late": 3,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "speed",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "mile",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "sweep-tosho",
+    "nombre": {
+      "es": "Sweep Tosho",
+      "en": "Sweep Tosho",
+      "ja": "Sweep Tosho"
+    },
+    "aliases": [
+      "Sweep Tosho (Platanus Witch)"
+    ],
+    "avatarColor": "#3a7e3d",
+    "distancia": "mile",
+    "estilo": "late",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 3,
+      "medium": 3,
+      "long": 0,
+      "front": 0,
+      "pace": 0,
+      "late": 3,
+      "end": 3
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "power",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "mile",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "inari-one",
+    "nombre": {
+      "es": "Inari One",
+      "en": "Inari One",
+      "ja": "Inari One"
+    },
+    "aliases": [
+      "Inari One (Edomurasaki)"
+    ],
+    "avatarColor": "#3a476e",
+    "distancia": "medium",
+    "estilo": "end",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 3,
+      "sprint": 0,
+      "mile": 2,
+      "medium": 3,
+      "long": 3,
+      "front": 0,
+      "pace": 2,
+      "late": 2,
+      "end": 3
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "power",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "curren-chan",
+    "nombre": {
+      "es": "Curren Chan",
+      "en": "Curren Chan",
+      "ja": "Curren Chan"
+    },
+    "aliases": [
+      "Curren Chan (Ma Chérie of the New Moon)"
+    ],
+    "avatarColor": "#7e783a",
+    "distancia": "sprint",
+    "estilo": "pace",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 3,
+      "mile": 0,
+      "medium": 0,
+      "long": 0,
+      "front": 2,
+      "pace": 3,
+      "late": 0,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "power",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "sprint",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "mejiro-palmer",
+    "nombre": {
+      "es": "Mejiro Palmer",
+      "en": "Mejiro Palmer",
+      "ja": "Mejiro Palmer"
+    },
+    "aliases": [
+      "Mejiro Palmer (Line Breakthrough)"
+    ],
+    "avatarColor": "#702453",
+    "distancia": "medium",
+    "estilo": "front",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 0,
+      "medium": 3,
+      "long": 3,
+      "front": 3,
+      "pace": 0,
+      "late": 0,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "speed",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "ines-fujin",
+    "nombre": {
+      "es": "Ines Fujin",
+      "en": "Ines Fujin",
+      "ja": "Ines Fujin"
+    },
+    "aliases": [
+      "Ines Fujin (Always Electrifying)"
+    ],
+    "avatarColor": "#2dd71d",
+    "distancia": "mile",
+    "estilo": "front",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 3,
+      "medium": 3,
+      "long": 1,
+      "front": 3,
+      "pace": 1,
+      "late": 0,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "speed",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "mile",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "king-halo",
+    "nombre": {
+      "es": "King Halo",
+      "en": "King Halo",
+      "ja": "King Halo"
+    },
+    "aliases": [
+      "King Halo (Cheerleader in Noble White)"
+    ],
+    "avatarColor": "#7634bc",
+    "distancia": "sprint",
+    "estilo": "late",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 3,
+      "mile": 2,
+      "medium": 2,
+      "long": 1,
+      "front": 0,
+      "pace": 2,
+      "late": 3,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "power",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "sprint",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "nice-nature",
+    "nombre": {
+      "es": "Nice Nature",
+      "en": "Nice Nature",
+      "ja": "Nice Nature"
+    },
+    "aliases": [
+      "Nice Nature (Run & Win)"
+    ],
+    "avatarColor": "#2b7cab",
+    "distancia": "medium",
+    "estilo": "late",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 1,
+      "medium": 3,
+      "long": 3,
+      "front": 0,
+      "pace": 2,
+      "late": 3,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "power",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "yaeno-muteki",
+    "nombre": {
+      "es": "Yaeno Muteki",
+      "en": "Yaeno Muteki",
+      "ja": "Yaeno Muteki"
+    },
+    "aliases": [
+      "Yaeno Muteki (Blazed Head, Covered Fists)"
+    ],
+    "avatarColor": "#5cce36",
+    "distancia": "medium",
+    "estilo": "pace",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 2,
+      "medium": 3,
+      "long": 0,
+      "front": 0,
+      "pace": 3,
+      "late": 3,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "power",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "nishino-flower",
+    "nombre": {
+      "es": "Nishino Flower",
+      "en": "Nishino Flower",
+      "ja": "Nishino Flower"
+    },
+    "aliases": [
+      "Nishino Flower (Layered Petals)"
+    ],
+    "avatarColor": "#6a4529",
+    "distancia": "sprint",
+    "estilo": "pace",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 3,
+      "mile": 3,
+      "medium": 0,
+      "long": 0,
+      "front": 0,
+      "pace": 3,
+      "late": 3,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "speed",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "sprint",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "seiun-sky",
+    "nombre": {
+      "es": "Seiun Sky",
+      "en": "Seiun Sky",
+      "ja": "Seiun Sky"
+    },
+    "aliases": [
+      "Seiun Sky (Soirée des Chatons)"
+    ],
+    "avatarColor": "#1a4551",
+    "distancia": "medium",
+    "estilo": "front",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 1,
+      "medium": 3,
+      "long": 3,
+      "front": 3,
+      "pace": 2,
+      "late": 0,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "guts",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "fuji-kiseki",
+    "nombre": {
+      "es": "Fuji Kiseki",
+      "en": "Fuji Kiseki",
+      "ja": "Fuji Kiseki"
+    },
+    "aliases": [
+      "Fuji Kiseki (Succès Étoilé)"
+    ],
+    "avatarColor": "#d737b7",
+    "distancia": "mile",
+    "estilo": "pace",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 2,
+      "mile": 3,
+      "medium": 2,
+      "long": 0,
+      "front": 1,
+      "pace": 3,
+      "late": 1,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "power",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "mile",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "mejiro-bright",
+    "nombre": {
+      "es": "Mejiro Bright",
+      "en": "Mejiro Bright",
+      "ja": "Mejiro Bright"
+    },
+    "aliases": [
+      "Mejiro Bright (Brunissage Line)"
+    ],
+    "avatarColor": "#371f60",
+    "distancia": "medium",
+    "estilo": "late",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 1,
+      "medium": 3,
+      "long": 3,
+      "front": 0,
+      "pace": 0,
+      "late": 3,
+      "end": 3
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "stamina",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "admire-vega",
+    "nombre": {
+      "es": "Admire Vega",
+      "en": "Admire Vega",
+      "ja": "Admire Vega"
+    },
+    "aliases": [
+      "Admire Vega (Starry Nocturne)"
+    ],
+    "avatarColor": "#47d17c",
+    "distancia": "medium",
+    "estilo": "end",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 1,
+      "medium": 3,
+      "long": 1,
+      "front": 0,
+      "pace": 0,
+      "late": 2,
+      "end": 3
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "power",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "mejiro-ardan",
+    "nombre": {
+      "es": "Mejiro Ardan",
+      "en": "Mejiro Ardan",
+      "ja": "Mejiro Ardan"
+    },
+    "aliases": [
+      "Mejiro Ardan (Crystalline)"
+    ],
+    "avatarColor": "#c52b4a",
+    "distancia": "medium",
+    "estilo": "pace",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 2,
+      "medium": 3,
+      "long": 0,
+      "front": 1,
+      "pace": 3,
+      "late": 0,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "wit",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "eishin-flash",
+    "nombre": {
+      "es": "Eishin Flash",
+      "en": "Eishin Flash",
+      "ja": "Eishin Flash"
+    },
+    "aliases": [
+      "Eishin Flash (Precise Chocolatier)"
+    ],
+    "avatarColor": "#312886",
+    "distancia": "medium",
+    "estilo": "late",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 0,
+      "medium": 3,
+      "long": 3,
+      "front": 0,
+      "pace": 2,
+      "late": 3,
+      "end": 1
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "wit",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "mihono-bourbon",
+    "nombre": {
+      "es": "Mihono Bourbon",
+      "en": "Mihono Bourbon",
+      "ja": "Mihono Bourbon"
+    },
+    "aliases": [
+      "Mihono Bourbon (CODE: ICING)"
+    ],
+    "avatarColor": "#d32735",
+    "distancia": "medium",
+    "estilo": "front",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 1,
+      "mile": 2,
+      "medium": 3,
+      "long": 2,
+      "front": 3,
+      "pace": 0,
+      "late": 0,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "stamina",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "sakura-chiyono-o",
+    "nombre": {
+      "es": "Sakura Chiyono O",
+      "en": "Sakura Chiyono O",
+      "ja": "Sakura Chiyono O"
+    },
+    "aliases": [
+      "Sakura Chiyono O (Strength in Full Bloom)"
+    ],
+    "avatarColor": "#603681",
+    "distancia": "mile",
+    "estilo": "pace",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 3,
+      "medium": 3,
+      "long": 0,
+      "front": 2,
+      "pace": 3,
+      "late": 0,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "speed",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "mile",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "t-m-opera-o",
+    "nombre": {
+      "es": "T.M. Opera O",
+      "en": "T.M. Opera O",
+      "ja": "T.M. Opera O"
+    },
+    "aliases": [
+      "T.M. Opera O (New Year, Same Radiance!)"
+    ],
+    "avatarColor": "#d86498",
+    "distancia": "medium",
+    "estilo": "pace",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 0,
+      "medium": 3,
+      "long": 3,
+      "front": 1,
+      "pace": 3,
+      "late": 3,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "stamina",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "haru-urara",
+    "nombre": {
+      "es": "Haru Urara",
+      "en": "Haru Urara",
+      "ja": "Haru Urara"
+    },
+    "aliases": [
+      "Haru Urara (New Year ♪ New Urara!)"
+    ],
+    "avatarColor": "#26785b",
+    "distancia": "sprint",
+    "estilo": "late",
+    "adaptabilidad": {
+      "turf": 0,
+      "dirt": 3,
+      "sprint": 3,
+      "mile": 2,
+      "medium": 0,
+      "long": 0,
+      "front": 0,
+      "pace": 0,
+      "late": 3,
+      "end": 2
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "guts",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "sprint",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "tamamo-cross",
+    "nombre": {
+      "es": "Tamamo Cross",
+      "en": "Tamamo Cross",
+      "ja": "Tamamo Cross"
+    },
+    "aliases": [
+      "Tamamo Cross (Fast as Lightning)"
+    ],
+    "avatarColor": "#1b504f",
+    "distancia": "medium",
+    "estilo": "pace",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 0,
+      "medium": 3,
+      "long": 3,
+      "front": 0,
+      "pace": 3,
+      "late": 3,
+      "end": 3
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "stamina",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "biwa-hayahide",
+    "nombre": {
+      "es": "Biwa Hayahide",
+      "en": "Biwa Hayahide",
+      "ja": "Biwa Hayahide"
+    },
+    "aliases": [
+      "Biwa Hayahide (Rouge Caroler)"
+    ],
+    "avatarColor": "#cf54e8",
+    "distancia": "medium",
+    "estilo": "pace",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 1,
+      "medium": 3,
+      "long": 3,
+      "front": 0,
+      "pace": 3,
+      "late": 2,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "stamina",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "tosen-jordan",
+    "nombre": {
+      "es": "Tosen Jordan",
+      "en": "Tosen Jordan",
+      "ja": "Tosen Jordan"
+    },
+    "aliases": [
+      "Tosen Jordan (Jokester ☆ Vibes)"
+    ],
+    "avatarColor": "#6425b1",
+    "distancia": "medium",
+    "estilo": "pace",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 0,
+      "medium": 3,
+      "long": 2,
+      "front": 1,
+      "pace": 3,
+      "late": 2,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "speed",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "gold-city",
+    "nombre": {
+      "es": "Gold City",
+      "en": "Gold City",
+      "ja": "Gold City"
+    },
+    "aliases": [
+      "Gold City (Autumn Cosmos)"
+    ],
+    "avatarColor": "#afde63",
+    "distancia": "mile",
+    "estilo": "pace",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 3,
+      "medium": 2,
+      "long": 2,
+      "front": 0,
+      "pace": 3,
+      "late": 3,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "wit",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "mile",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "manhattan-cafe",
+    "nombre": {
+      "es": "Manhattan Cafe",
+      "en": "Manhattan Cafe",
+      "ja": "Manhattan Cafe"
+    },
+    "aliases": [
+      "Manhattan Cafe (Creeping Shadow)"
+    ],
+    "avatarColor": "#204c23",
+    "distancia": "long",
+    "estilo": "late",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 0,
+      "medium": 2,
+      "long": 3,
+      "front": 0,
+      "pace": 1,
+      "late": 3,
+      "end": 1
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "stamina",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "long",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "kawakami-princess",
+    "nombre": {
+      "es": "Kawakami Princess",
+      "en": "Kawakami Princess",
+      "ja": "Kawakami Princess"
+    },
+    "aliases": [
+      "Kawakami Princess (Princess of Pink)"
+    ],
+    "avatarColor": "#852e46",
+    "distancia": "medium",
+    "estilo": "late",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 2,
+      "medium": 3,
+      "long": 0,
+      "front": 0,
+      "pace": 1,
+      "late": 3,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "guts",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "super-creek",
+    "nombre": {
+      "es": "Super Creek",
+      "en": "Super Creek",
+      "ja": "Super Creek"
+    },
+    "aliases": [
+      "Super Creek (Chiffon-Wrapped Mummy)"
+    ],
+    "avatarColor": "#2a626f",
+    "distancia": "medium",
+    "estilo": "pace",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 0,
+      "medium": 3,
+      "long": 3,
+      "front": 0,
+      "pace": 3,
+      "late": 2,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "speed",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "rice-shower",
+    "nombre": {
+      "es": "Rice Shower",
+      "en": "Rice Shower",
+      "ja": "Rice Shower"
+    },
+    "aliases": [
+      "Rice Shower (Vampire Makeover!)"
+    ],
+    "avatarColor": "#5126c0",
+    "distancia": "medium",
+    "estilo": "pace",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 1,
+      "medium": 3,
+      "long": 3,
+      "front": 2,
+      "pace": 3,
+      "late": 1,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "stamina",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "agnes-digital",
+    "nombre": {
+      "es": "Agnes Digital",
+      "en": "Agnes Digital",
+      "ja": "Agnes Digital"
+    },
+    "aliases": [
+      "Agnes Digital (Full-Color Fangirling)"
+    ],
+    "avatarColor": "#54e388",
+    "distancia": "mile",
+    "estilo": "pace",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 3,
+      "sprint": 0,
+      "mile": 3,
+      "medium": 3,
+      "long": 0,
+      "front": 0,
+      "pace": 3,
+      "late": 3,
+      "end": 2
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "speed",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "mile",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "hishi-akebono",
+    "nombre": {
+      "es": "Hishi Akebono",
+      "en": "Hishi Akebono",
+      "ja": "Hishi Akebono"
+    },
+    "aliases": [
+      "Hishi Akebono (Buono☆Alla Moda)"
+    ],
+    "avatarColor": "#bce746",
+    "distancia": "sprint",
+    "estilo": "pace",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 3,
+      "mile": 2,
+      "medium": 0,
+      "long": 0,
+      "front": 2,
+      "pace": 3,
+      "late": 1,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "power",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "sprint",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "matikane-fukukitaru",
+    "nombre": {
+      "es": "Matikane Fukukitaru",
+      "en": "Matikane Fukukitaru",
+      "ja": "Matikane Fukukitaru"
+    },
+    "aliases": [
+      "Matikane Fukukitaru (Lucky Tidings)"
+    ],
+    "avatarColor": "#5d2d39",
+    "distancia": "medium",
+    "estilo": "late",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 1,
+      "medium": 3,
+      "long": 3,
+      "front": 0,
+      "pace": 2,
+      "late": 3,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "stamina",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "meisho-doto",
+    "nombre": {
+      "es": "Meisho Doto",
+      "en": "Meisho Doto",
+      "ja": "Meisho Doto"
+    },
+    "aliases": [
+      "Meisho Doto (Turbulent Blue)"
+    ],
+    "avatarColor": "#24512e",
+    "distancia": "medium",
+    "estilo": "pace",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 0,
+      "medium": 3,
+      "long": 3,
+      "front": 0,
+      "pace": 3,
+      "late": 2,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "stamina",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "hishi-amazon",
+    "nombre": {
+      "es": "Hishi Amazon",
+      "en": "Hishi Amazon",
+      "ja": "Hishi Amazon"
+    },
+    "aliases": [
+      "Hishi Amazon (Azure Amazon)"
+    ],
+    "avatarColor": "#4e7425",
+    "distancia": "mile",
+    "estilo": "end",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 3,
+      "medium": 3,
+      "long": 2,
+      "front": 0,
+      "pace": 2,
+      "late": 1,
+      "end": 3
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "power",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "mile",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "mayano-top-gun",
+    "nombre": {
+      "es": "Mayano Top Gun",
+      "en": "Mayano Top Gun",
+      "ja": "Mayano Top Gun"
+    },
+    "aliases": [
+      "Mayano Top Gun (Sunlight Bouquet)"
+    ],
+    "avatarColor": "#224929",
+    "distancia": "medium",
+    "estilo": "front",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 0,
+      "medium": 3,
+      "long": 3,
+      "front": 3,
+      "pace": 3,
+      "late": 2,
+      "end": 2
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "speed",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "narita-taishin",
+    "nombre": {
+      "es": "Narita Taishin",
+      "en": "Narita Taishin",
+      "ja": "Narita Taishin"
+    },
+    "aliases": [
+      "Narita Taishin (Nevertheless)"
+    ],
+    "avatarColor": "#435b2f",
+    "distancia": "medium",
+    "estilo": "end",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 0,
+      "medium": 3,
+      "long": 3,
+      "front": 0,
+      "pace": 0,
+      "late": 2,
+      "end": 3
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "guts",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "matikane-tannhauser",
+    "nombre": {
+      "es": "Matikane Tannhauser",
+      "en": "Matikane Tannhauser",
+      "ja": "Matikane Tannhauser"
+    },
+    "aliases": [
+      "Matikane Tannhauser (Clippety Tippety Clop)"
+    ],
+    "avatarColor": "#55e797",
+    "distancia": "medium",
+    "estilo": "pace",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 0,
+      "medium": 3,
+      "long": 3,
+      "front": 0,
+      "pace": 3,
+      "late": 3,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "stamina",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "sakura-bakushin-o",
+    "nombre": {
+      "es": "Sakura Bakushin O",
+      "en": "Sakura Bakushin O",
+      "ja": "Sakura Bakushin O"
+    },
+    "aliases": [
+      "Sakura Bakushin O (Blossom in Learning)"
+    ],
+    "avatarColor": "#3e5c93",
+    "distancia": "sprint",
+    "estilo": "front",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 3,
+      "mile": 2,
+      "medium": 0,
+      "long": 0,
+      "front": 3,
+      "pace": 3,
+      "late": 0,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "speed",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "sprint",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "winning-ticket",
+    "nombre": {
+      "es": "Winning Ticket",
+      "en": "Winning Ticket",
+      "ja": "Winning Ticket"
+    },
+    "aliases": [
+      "Winning Ticket (Get to Winning!)"
+    ],
+    "avatarColor": "#7e4087",
+    "distancia": "medium",
+    "estilo": "late",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 0,
+      "medium": 3,
+      "long": 2,
+      "front": 0,
+      "pace": 2,
+      "late": 3,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "power",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  },
+  {
+    "id": "agnes-tachyon",
+    "nombre": {
+      "es": "Agnes Tachyon",
+      "en": "Agnes Tachyon",
+      "ja": "Agnes Tachyon"
+    },
+    "aliases": [
+      "Agnes Tachyon (Tach-nology)"
+    ],
+    "avatarColor": "#2c8756",
+    "distancia": "medium",
+    "estilo": "pace",
+    "adaptabilidad": {
+      "turf": 3,
+      "dirt": 0,
+      "sprint": 0,
+      "mile": 0,
+      "medium": 3,
+      "long": 2,
+      "front": 0,
+      "pace": 3,
+      "late": 2,
+      "end": 0
+    },
+    "factoresDefault": {
+      "azul": {
+        "tipo": "speed",
+        "estrellas": 2
+      },
+      "rojo": {
+        "tipo": "medium",
+        "estrellas": 2
+      },
+      "verde": {
+        "nombre": "",
+        "estrellas": 0
+      }
+    }
+  }
 ]

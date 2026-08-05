@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "test": "vitest run",
     "validate-data": "node scripts/validate-data.mjs",
+    "fetch-characters": "node scripts/fetch-characters.mjs",
     "lint": "oxlint",
     "preview": "vite preview"
   },
