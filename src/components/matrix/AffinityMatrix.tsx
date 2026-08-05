@@ -1,8 +1,7 @@
 import { useMemo } from 'react';
-import AffinityBadge from './AffinityBadge';
-import type { Arbol, RangoAfinidad } from '../../types';
+import type { Arbol } from '../../types';
 import { POSICIONES_ANCESTROS, POS_LABELS } from '../../types';
-import { getAffinityScore, getRango } from '../../utils/affinityCalculator';
+import { getAffinityScore } from '../../utils/affinityCalculator';
 import { getPersonajeNombre } from '../../utils/characterLabels';
 
 interface AffinityMatrixProps {
@@ -45,13 +44,16 @@ export default function AffinityMatrix({ arbol }: AffinityMatrixProps) {
     );
   }
 
-  const getAffinity = (idA: string, idB: string): { puntuacion: number; rango: RangoAfinidad } => {
-    if (idA === idB) return { puntuacion: 100, rango: '◎' };
-    const p = getAffinityScore(idA, idB);
-    return { puntuacion: p, rango: getRango(p) };
-  };
+  const getAffinity = (idA: string, idB: string): number => getAffinityScore(idA, idB);
 
   const allChars = [objetivo, ...ancestros.map((a) => a.personaje)];
+
+  const pairColor = (score: number): string => {
+    if (score === 0) return 'bg-gray-800/60 text-gray-600 border-gray-700/40';
+    if (score < 21) return 'bg-orange-500/10 text-orange-300 border-orange-400/25';
+    if (score < 35) return 'bg-amber-500/10 text-amber-300 border-amber-400/25';
+    return 'bg-emerald-500/10 text-emerald-300 border-emerald-400/25';
+  };
 
   return (
     <div className="overflow-x-auto rounded-2xl border border-gray-800 bg-gray-900/40 animate-fade-in">
@@ -99,10 +101,12 @@ export default function AffinityMatrix({ arbol }: AffinityMatrixProps) {
                   </div>
                 </td>
                 {allChars.map((colChar, ci) => {
-                  const { puntuacion, rango } = getAffinity(rowChar.id, colChar.id);
+                  const score = getAffinity(rowChar.id, colChar.id);
                   return (
                     <td key={ci} className="p-2.5 border-b border-gray-800/80 text-center">
-                      <AffinityBadge rango={rango} puntuacion={puntuacion} />
+                      <span className={`inline-flex items-center justify-center min-w-9 px-2 py-1 rounded-lg text-sm font-bold border tabular-nums ${pairColor(score)}`}>
+                        {score}
+                      </span>
                     </td>
                   );
                 })}

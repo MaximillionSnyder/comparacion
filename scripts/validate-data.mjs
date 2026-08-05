@@ -6,7 +6,6 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const readJson = (file) => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
 
 const characters = readJson('src/data/characters.json');
-const affinityMatrix = readJson('src/data/affinityMatrix.json');
 const errors = [];
 const locales = ['es', 'en', 'ja'];
 const distances = new Set(['sprint', 'mile', 'medium', 'long']);
@@ -60,28 +59,10 @@ for (const [index, character] of characters.entries()) {
   if (typeof verde?.nombre !== 'string' || !isStars(verde?.estrellas)) errors.push(`${prefix}.factoresDefault.verde inválido.`);
 }
 
-const matrixIds = Object.keys(affinityMatrix);
-if (matrixIds.length !== ids.size || matrixIds.some((id) => !ids.has(id))) {
-  errors.push('La matriz debe tener exactamente una fila por cada personaje.');
-}
-for (const id of ids) {
-  const row = affinityMatrix[id];
-  if (!row || Object.keys(row).length !== ids.size || Object.keys(row).some((columnId) => !ids.has(columnId))) {
-    errors.push(`La fila de matriz de ${id} debe contener todos los personajes y ningún ID desconocido.`);
-    continue;
-  }
-  for (const [columnId, value] of Object.entries(row)) {
-    if (!Number.isFinite(value) || value < 0 || value > 100) {
-      errors.push(`Afinidad inválida ${id} -> ${columnId}: ${value}.`);
-    }
-  }
-  if (row[id] !== 100) errors.push(`La diagonal de afinidad de ${id} debe ser 100.`);
-}
-
 if (errors.length > 0) {
   console.error(`Validación de datos fallida (${errors.length} errores):`);
   for (const error of errors) console.error(`- ${error}`);
   process.exitCode = 1;
 } else {
-  console.log(`Datos válidos: ${characters.length} personajes y matriz ${characters.length}x${characters.length}.`);
+  console.log(`Datos válidos: ${characters.length} personajes.`);
 }

@@ -7,7 +7,7 @@ import type { Arbol, PosicionNodo } from '../../types';
 interface PedigreeTreeProps {
   arbol: Arbol;
   rango: string;
-  detalle: { base: number; bonusPadres: number; bonusAbuelos: number; bonusFactores: number };
+  detalle: { parejaPadre: number; parejaMadre: number; padreMadre: number; triples: number };
   onSelectSlot: (posicion: PosicionNodo) => void;
   onEditFactor: (posicion: PosicionNodo) => void;
   onClearSlot: (posicion: PosicionNodo) => void;
@@ -77,7 +77,7 @@ export default function PedigreeTree({
           : 'text-gray-500 bg-gray-800/50 border-gray-700';
 
   const p = { arbol, onSelectSlot, onEditFactor, onClearSlot };
-  const filled =
+  const afinidadLlena =
     (arbol.padre.personaje ? 1 : 0) +
     (arbol.madre.personaje ? 1 : 0) +
     (arbol.abueloPaterno.personaje ? 1 : 0) +
@@ -93,19 +93,28 @@ export default function PedigreeTree({
           <span className="text-4xl font-black leading-none">{rango === '-' ? '—' : rango}</span>
           <div className="text-left">
             <div className="text-[10px] uppercase tracking-wider opacity-70">Afinidad</div>
-            <div className="text-sm font-bold tabular-nums">Total {detalle.base + detalle.bonusFactores}</div>
+            <div className="text-sm font-bold tabular-nums">Total {detalle.parejaPadre + detalle.parejaMadre + detalle.padreMadre + detalle.triples}</div>
           </div>
         </div>
         <div className="flex gap-2 text-[11px]">
-          <span className="px-2.5 py-1.5 rounded-lg bg-gray-800/80 border border-gray-700 text-gray-400">
-            Base <b className="text-gray-200">{detalle.base}</b>
+          <span className="px-2.5 py-1.5 rounded-lg bg-gray-800/80 border border-gray-700 text-gray-400" title="Compatibilidad objetivo ↔ padre">
+            Obj↔Padre <b className="text-sky-300">{detalle.parejaPadre}</b>
+          </span>
+          <span className="px-2.5 py-1.5 rounded-lg bg-gray-800/80 border border-gray-700 text-gray-400" title="Compatibilidad objetivo ↔ madre">
+            Obj↔Madre <b className="text-pink-300">{detalle.parejaMadre}</b>
+          </span>
+          <span className="px-2.5 py-1.5 rounded-lg bg-gray-800/80 border border-gray-700 text-gray-400" title="Compatibilidad entre ambos padres">
+            Padre↔Madre <b className="text-violet-300">{detalle.padreMadre}</b>
+          </span>
+          <span className="px-2.5 py-1.5 rounded-lg bg-gray-800/80 border border-gray-700 text-gray-400" title="Triples objetivo + padre + abuelo (solo grupos compartidos por los 3)">
+            Abuelos <b className="text-emerald-300">+{detalle.triples}</b>
           </span>
           <span className="px-2.5 py-1.5 rounded-lg bg-gray-800/80 border border-gray-700 text-gray-400">
-            Factores <b className="text-emerald-300">+{detalle.bonusFactores}</b>
+            Slots <b className="text-sky-300">{afinidadLlena}/6</b>
           </span>
-          <span className="px-2.5 py-1.5 rounded-lg bg-gray-800/80 border border-gray-700 text-gray-400">
-            Slots <b className="text-sky-300">{filled}/14</b>
-          </span>
+        </div>
+        <div className="text-[10px] text-gray-600">
+          Umbrales: ◎ ≥ 150 · ○ ≥ 50 · △ &lt; 50
         </div>
       </div>
 

@@ -1,12 +1,10 @@
 import { describe, expect, it } from 'vitest';
 import characters from '../data/characters.json';
-import affinityMatrix from '../data/affinityMatrix.json';
 import { CONFLICT_SLOTS } from '../data/pedigreeConfig';
-import { getRango } from './affinityCalculator';
+import { afinidadPar, afinidadTriple, getAffinityScore, getRango } from './affinityCalculator';
 import type { Personaje, PosicionNodo } from '../types';
 
 const personajes = characters as Personaje[];
-const matrix = affinityMatrix as Record<string, Record<string, number>>;
 
 describe('domain data', () => {
   it('has unique IDs and localized names', () => {
@@ -18,22 +16,38 @@ describe('domain data', () => {
       expect(personaje.nombre.ja).toBeTruthy();
     }
   });
-
-  it('has a complete affinity matrix', () => {
-    const ids = personajes.map((personaje) => personaje.id);
-    for (const id of ids) {
-      expect(Object.keys(matrix[id])).toHaveLength(ids.length);
-      expect(matrix[id][id]).toBe(100);
-    }
-  });
 });
 
 describe('affinity ranges', () => {
-  it('keeps the documented thresholds', () => {
+  it('keeps the game thresholds', () => {
     expect(getRango(0)).toBe('-');
     expect(getRango(1)).toBe('△');
     expect(getRango(50)).toBe('○');
-    expect(getRango(80)).toBe('◎');
+    expect(getRango(150)).toBe('◎');
+  });
+});
+
+describe('affinity formula', () => {
+  it('gives 0 for the same character (self affinity)', () => {
+    const a = personajes[0];
+    expect(afinidadPar(a, a)).toBe(0);
+    expect(afinidadTriple(a, a, personajes[1])).toBe(0);
+    expect(afinidadTriple(a, personajes[1], a)).toBe(0);
+  });
+
+  it('is symmetric between two characters', () => {
+    const a = personajes[0];
+    const b = personajes[1];
+    expect(afinidadPar(a, b)).toBe(afinidadPar(b, a));
+    expect(getAffinityScore(a.id, b.id)).toBe(afinidadPar(a, b));
+  });
+
+  it('scales by the number of shared aptitude groups (7pt each)', () => {
+    const a = personajes[0];
+    const b = personajes[1];
+    const score = afinidadPar(a, b);
+    expect(score % 7).toBe(0);
+    expect(score).toBeGreaterThanOrEqual(0);
   });
 });
 

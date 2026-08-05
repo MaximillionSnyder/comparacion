@@ -142,10 +142,10 @@ export interface ResultadoAfinidad {
   puntuacionTotal: number;
   rango: RangoAfinidad;
   detalle: {
-    base: number;
-    bonusPadres: number;
-    bonusAbuelos: number;
-    bonusFactores: number;
+    parejaPadre: number;
+    parejaMadre: number;
+    padreMadre: number;
+    triples: number;
   };
 }
 

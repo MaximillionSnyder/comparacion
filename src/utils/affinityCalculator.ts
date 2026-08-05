@@ -1,90 +1,91 @@
-import affinityMatrix from '../data/affinityMatrix.json';
-import type { Arbol, PosicionNodo, RangoAfinidad, ResultadoAfinidad } from '../types';
-import { POSICIONES_ANCESTROS } from '../types';
+import characters from '../data/characters.json';
+import type { Adaptabilidad, Arbol, Personaje, RangoAfinidad, ResultadoAfinidad } from '../types';
 
-const affinityValues = affinityMatrix as Record<string, Record<string, number>>;
+const ADAPT_KEYS = Object.keys((characters as Personaje[])[0]?.adaptabilidad ?? {}) as (keyof Adaptabilidad)[];
 
-export function getAffinityScore(idA: string, idB: string): number {
-  const score = affinityValues[idA]?.[idB];
-  if (!Number.isFinite(score)) {
-    throw new Error(`Missing affinity score for ${idA} -> ${idB}`);
-  }
-  return score;
+const PUNTOS_GRUPO_APTITUD = 7;
+const APTITUD_MINIMA_GRUPO = 2;
+
+const personajes = characters as Personaje[];
+const porId = new Map(personajes.map((personaje) => [personaje.id, personaje]));
+
+export function getPersonajePorId(id: string): Personaje | undefined {
+  return porId.get(id);
 }
 
-function bonusFactores(arbol: Arbol, posicion: PosicionNodo): number {
-  const target = arbol.objetivo;
-  const ancestro = arbol[posicion];
-  let bonus = 0;
+function enGrupo(personaje: Personaje, key: keyof Adaptabilidad): boolean {
+  return (personaje.adaptabilidad[key] ?? 0) >= APTITUD_MINIMA_GRUPO;
+}
 
-  if (target.factorAzul.tipo === ancestro.factorAzul.tipo && target.factorAzul.estrellas > 0 && ancestro.factorAzul.estrellas > 0) {
-    bonus += Math.min(target.factorAzul.estrellas, ancestro.factorAzul.estrellas) * 7;
+export function afinidadPar(a: Personaje, b: Personaje): number {
+  if (a.id === b.id) return 0;
+  let puntos = 0;
+  for (const key of ADAPT_KEYS) {
+    if (enGrupo(a, key) && enGrupo(b, key)) puntos += PUNTOS_GRUPO_APTITUD;
   }
-  if (target.factorRojo.tipo === ancestro.factorRojo.tipo && target.factorRojo.estrellas > 0 && ancestro.factorRojo.estrellas > 0) {
-    bonus += Math.min(target.factorRojo.estrellas, ancestro.factorRojo.estrellas) * 5;
-  }
-  if (target.factorVerde.estrellas > 0 && ancestro.factorVerde.estrellas > 0) {
-    bonus += Math.min(target.factorVerde.estrellas, ancestro.factorVerde.estrellas) * 3;
-  }
+  return puntos;
+}
 
-  return bonus;
+export function afinidadTriple(a: Personaje, b: Personaje, c: Personaje): number {
+  if (a.id === b.id || a.id === c.id || b.id === c.id) return 0;
+  let puntos = 0;
+  for (const key of ADAPT_KEYS) {
+    if (enGrupo(a, key) && enGrupo(b, key) && enGrupo(c, key)) puntos += PUNTOS_GRUPO_APTITUD;
+  }
+  return puntos;
+}
+
+export function getAffinityScore(idA: string, idB: string): number {
+  const a = porId.get(idA);
+  const b = porId.get(idB);
+  if (!a) throw new Error(`Personaje desconocido: ${idA}`);
+  if (!b) throw new Error(`Personaje desconocido: ${idB}`);
+  return afinidadPar(a, b);
 }
 
 export function getRango(puntuacion: number): RangoAfinidad {
-  if (puntuacion >= 80) return '◎';
+  if (puntuacion >= 150) return '◎';
   if (puntuacion >= 50) return '○';
   if (puntuacion > 0) return '△';
   return '-';
 }
 
 export function calcularAfinidad(arbol: Arbol): ResultadoAfinidad {
-  const { objetivo } = arbol;
-  if (!objetivo.personaje) {
-    return {
-      puntuacionTotal: 0,
-      rango: '-',
-      detalle: { base: 0, bonusPadres: 0, bonusAbuelos: 0, bonusFactores: 0 },
-    };
+  const vacio = {
+    puntuacionTotal: 0,
+    rango: '-' as RangoAfinidad,
+    detalle: { parejaPadre: 0, parejaMadre: 0, padreMadre: 0, triples: 0 },
+  };
+
+  const objetivo = arbol.objetivo.personaje;
+  if (!objetivo) return vacio;
+
+  const padre = arbol.padre.personaje;
+  const madre = arbol.madre.personaje;
+
+  const parejaPadre = padre ? afinidadPar(objetivo, padre) : 0;
+  const parejaMadre = madre ? afinidadPar(objetivo, madre) : 0;
+  const padreMadre = padre && madre ? afinidadPar(padre, madre) : 0;
+
+  let triples = 0;
+  if (padre) {
+    const ap = arbol.abueloPaterno.personaje;
+    const bp = arbol.abuelaPaterna.personaje;
+    if (ap) triples += afinidadTriple(objetivo, padre, ap);
+    if (bp) triples += afinidadTriple(objetivo, padre, bp);
+  }
+  if (madre) {
+    const am = arbol.abueloMaterno.personaje;
+    const bm = arbol.abuelaMaterna.personaje;
+    if (am) triples += afinidadTriple(objetivo, madre, am);
+    if (bm) triples += afinidadTriple(objetivo, madre, bm);
   }
 
-  const targetId = objetivo.personaje.id;
-
-  let baseTotal = 0;
-  let bonusFactoresTotal = 0;
-  let bonusPadres = 0;
-  let bonusAbuelos = 0;
-  let ancestrosConPersonaje = 0;
-
-  for (const pos of POSICIONES_ANCESTROS) {
-    const nodo = arbol[pos];
-    if (!nodo.personaje) continue;
-    ancestrosConPersonaje++;
-
-    const basePareja = getAffinityScore(targetId, nodo.personaje.id);
-    baseTotal += basePareja;
-
-    const bf = bonusFactores(arbol, pos);
-    bonusFactoresTotal += bf;
-
-    if (pos === 'padre' || pos === 'madre') {
-      bonusPadres += basePareja + bf;
-    } else {
-      bonusAbuelos += basePareja + bf;
-    }
-  }
-
-  const puntuacionTotal = baseTotal + bonusFactoresTotal;
-  const promedio = ancestrosConPersonaje > 0 ? puntuacionTotal / ancestrosConPersonaje : 0;
-  const rango = ancestrosConPersonaje > 0 ? getRango(promedio) : '-';
+  const puntuacionTotal = parejaPadre + parejaMadre + padreMadre + triples;
 
   return {
     puntuacionTotal,
-    rango,
-    detalle: {
-      base: baseTotal,
-      bonusPadres,
-      bonusAbuelos,
-      bonusFactores: bonusFactoresTotal,
-    },
+    rango: getRango(puntuacionTotal),
+    detalle: { parejaPadre, parejaMadre, padreMadre, triples },
   };
 }
