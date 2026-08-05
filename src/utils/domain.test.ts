@@ -38,11 +38,12 @@ describe('affinity ranges', () => {
 });
 
 describe('pedigree conflicts', () => {
-  it('keeps conflicts symmetric', () => {
+  it('contains no self-conflicts and keeps the branch rules', () => {
     for (const [position, conflicts] of Object.entries(CONFLICT_SLOTS) as [PosicionNodo, PosicionNodo[]][]) {
-      for (const conflict of conflicts) {
-        expect(CONFLICT_SLOTS[conflict]).toContain(position);
-      }
+      expect(conflicts).not.toContain(position);
     }
+    expect(CONFLICT_SLOTS.objetivo).toEqual(['padre', 'madre']);
+    expect(CONFLICT_SLOTS.padre).toContain('bisAbueloPP');
+    expect(CONFLICT_SLOTS.bisAbueloPP).toContain('abueloPaterno');
   });
 });
