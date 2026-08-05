@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import CharacterCard from './CharacterCard';
 import AptitudPanel from './AptitudPanel';
+import { POSICIONES_BISABUELOS } from '../../types';
 import type { Arbol, PosicionNodo } from '../../types';
 
 interface PedigreeTreeProps {
@@ -61,6 +63,10 @@ function GenLabel({ children, tone }: { children: string; tone?: 'sky' | 'pink' 
 export default function PedigreeTree({
   arbol, rango, detalle, onSelectSlot, onEditFactor, onClearSlot,
 }: PedigreeTreeProps) {
+  const [bisabuelosExpanded, setBisabuelosExpanded] = useState(false);
+
+  const filledBis = POSICIONES_BISABUELOS.filter((pos) => arbol[pos].personaje).length;
+
   const rangoStyle =
     rango === '◎'
       ? 'text-amber-300 bg-amber-500/15 border-amber-400/40 shadow-amber-500/20'
@@ -156,8 +162,21 @@ export default function PedigreeTree({
 
           {/* Gen 3 */}
           <div className="flex flex-col items-center gap-3 w-full">
-            <GenLabel>3.ª generación · Bisabuelos</GenLabel>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 w-full max-w-5xl px-2">
+            <button
+              type="button"
+              onClick={() => setBisabuelosExpanded((v) => !v)}
+              aria-expanded={bisabuelosExpanded}
+              className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full border text-violet-300 bg-violet-500/10 border-violet-500/25 hover:bg-violet-500/20 active:scale-[0.98] transition-all"
+            >
+              <span className="text-xs leading-none">{bisabuelosExpanded ? '▾' : '▸'}</span>
+              3.ª generación · Bisabuelos
+              <span className="px-1.5 py-0.5 rounded-full bg-violet-500/20 text-violet-200 tracking-normal">
+                {filledBis}/8
+              </span>
+            </button>
+
+            {bisabuelosExpanded && (
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 w-full max-w-5xl px-2 animate-fade-in">
               {(
                 [
                   { title: 'Padres del Ab. paterno', a: 'bisAbueloPP', b: 'bisAbuelaPP', h: 'paternal' as const },
@@ -182,6 +201,7 @@ export default function PedigreeTree({
                 </div>
               ))}
             </div>
+            )}
           </div>
         </div>
       </div>

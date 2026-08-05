@@ -1,4 +1,6 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
+import { App as CapApp } from '@capacitor/app';
+import { Capacitor } from '@capacitor/core';
 import PedigreeTree from './components/tree/PedigreeTree';
 import AffinityMatrix from './components/matrix/AffinityMatrix';
 import CharacterSelectorModal from './components/modals/CharacterSelectorModal';
@@ -21,6 +23,47 @@ function App() {
   const [tab, setTab] = useState<'tree' | 'matrix'>('tree');
   const [modalSelector, setModalSelector] = useState<PosicionNodo | null>(null);
   const [modalFactor, setModalFactor] = useState<PosicionNodo | null>(null);
+  const [showExitConfirm, setShowExitConfirm] = useState(false);
+
+  const modalSelectorRef = useRef(modalSelector);
+  const modalFactorRef = useRef(modalFactor);
+  const showExitConfirmRef = useRef(showExitConfirm);
+  modalSelectorRef.current = modalSelector;
+  modalFactorRef.current = modalFactor;
+  showExitConfirmRef.current = showExitConfirm;
+
+  useEffect(() => {
+    if (!Capacitor.isNativePlatform()) return;
+
+    const listener = CapApp.addListener('backButton', () => {
+      if (modalSelectorRef.current !== null) {
+        setModalSelector(null);
+        return;
+      }
+      if (modalFactorRef.current !== null) {
+        setModalFactor(null);
+        return;
+      }
+      if (showExitConfirmRef.current) {
+        setShowExitConfirm(false);
+        return;
+      }
+      setShowExitConfirm(true);
+    });
+
+    return () => {
+      listener.then((l) => l.remove());
+    };
+  }, []);
+
+  useEffect(() => {
+    if (Capacitor.isNativePlatform()) return;
+    const onBeforeUnload = (e: BeforeUnloadEvent) => {
+      e.preventDefault();
+    };
+    window.addEventListener('beforeunload', onBeforeUnload);
+    return () => window.removeEventListener('beforeunload', onBeforeUnload);
+  }, []);
 
   const excludeForSlot = useMemo((): Record<PosicionNodo, string[]> => {
     const id = (pos: PosicionNodo) => arbol[pos].personaje?.id;
@@ -216,6 +259,39 @@ function App() {
         onSetVerde={(pos, factor) => setFactorVerde(pos, factor)}
         onAutoFill={(pos) => autoFillFactores(pos)}
       />
+
+      {showExitConfirm && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-sm p-4"
+          onClick={() => setShowExitConfirm(false)}
+        >
+          <div
+            className="bg-gray-900 border border-gray-700/80 rounded-2xl w-full max-w-xs p-5 shadow-2xl animate-pop"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 className="text-base font-bold text-white mb-1">¿Salir de la app?</h2>
+            <p className="text-xs text-gray-400 mb-4">
+              Si sales ahora, la aplicación se cerrará.
+            </p>
+            <div className="flex gap-2">
+              <button
+                type="button"
+                onClick={() => setShowExitConfirm(false)}
+                className="flex-1 px-3 py-2.5 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-200 text-sm font-semibold transition-colors min-h-[44px]"
+              >
+                Cancelar
+              </button>
+              <button
+                type="button"
+                onClick={() => void CapApp.exitApp()}
+                className="flex-1 px-3 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white text-sm font-semibold transition-colors min-h-[44px]"
+              >
+                Salir
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
