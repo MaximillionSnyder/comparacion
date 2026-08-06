@@ -118,14 +118,15 @@ export default function PedigreeTree({
         </div>
       </div>
 
-      <AptitudPanel arbol={arbol} />
-
       <div className="overflow-x-auto pb-4">
         <div className="flex flex-col items-center gap-1 p-2 min-w-[760px]">
           {/* Gen 0 */}
           <div className="flex flex-col items-center gap-2 w-full">
             <GenLabel tone="violet">Objetivo · Trainee</GenLabel>
-            <Card {...p} pos="objetivo" label="Objetivo" highlight="target" />
+            <div className="flex items-center justify-center gap-4 flex-wrap">
+              <Card {...p} pos="objetivo" label="Objetivo" highlight="target" />
+              <AptitudPanel arbol={arbol} />
+            </div>
             {!arbol.objetivo.personaje && (
               <p className="text-xs text-gray-500 max-w-xs text-center">
                 Empieza eligiendo el personaje que vas a entrenar
