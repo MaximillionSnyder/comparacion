@@ -123,9 +123,12 @@ export default function PedigreeTree({
           {/* Gen 0 */}
           <div className="flex flex-col items-center gap-2 w-full">
             <GenLabel tone="violet">Objetivo · Trainee</GenLabel>
-            <div className="flex items-center justify-center gap-4 flex-wrap">
+            <div className="grid grid-cols-[1fr_auto_1fr] items-center w-full">
+              <div aria-hidden />
               <Card {...p} pos="objetivo" label="Objetivo" highlight="target" />
-              <AptitudPanel arbol={arbol} />
+              <div className="justify-self-start">
+                <AptitudPanel arbol={arbol} />
+              </div>
             </div>
             {!arbol.objetivo.personaje && (
               <p className="text-xs text-gray-500 max-w-xs text-center">
