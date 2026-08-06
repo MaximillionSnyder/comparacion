@@ -5,6 +5,13 @@ const ADAPT_KEYS = Object.keys((characters as Personaje[])[0]?.adaptabilidad ?? 
 
 const PUNTOS_GRUPO_APTITUD = 7;
 const APTITUD_MINIMA_GRUPO = 2;
+const PUNTOS_DORM = 2;
+const PUNTOS_GRADO = 2;
+const PUNTOS_GRUPO = 1;
+const PUNTOS_ROOM = 2;
+
+const UMBRAL_SOU = 151;
+const UMBRAL_MARU = 51;
 
 const personajes = characters as Personaje[];
 const porId = new Map(personajes.map((personaje) => [personaje.id, personaje]));
@@ -17,12 +24,40 @@ function enGrupo(personaje: Personaje, key: keyof Adaptabilidad): boolean {
   return (personaje.adaptabilidad[key] ?? 0) >= APTITUD_MINIMA_GRUPO;
 }
 
+function mismoDorm(chars: Personaje[]): boolean {
+  const dorms = chars.map((c) => c.afinidad?.dorm);
+  if (dorms.some((d) => d === undefined || d === 'solo')) return false;
+  return new Set(dorms).size === 1;
+}
+
+function mismoGrado(chars: Personaje[]): boolean {
+  const grados = chars.map((c) => c.afinidad?.grado);
+  if (grados.some((g) => g === undefined)) return false;
+  return new Set(grados).size === 1;
+}
+
+function gruposComunes(chars: Personaje[]): number {
+  const primero = chars[0].afinidad?.grupos ?? [];
+  return primero.filter((g) => chars.slice(1).every((c) => c.afinidad?.grupos?.includes(g))).length;
+}
+
+/** Bonus 共通 de la fórmula real: 寮 +2, 学年 +2, 仲間 +1 c/u. */
+function bonusComunes(chars: Personaje[]): number {
+  let puntos = 0;
+  if (mismoDorm(chars)) puntos += PUNTOS_DORM;
+  if (mismoGrado(chars)) puntos += PUNTOS_GRADO;
+  puntos += gruposComunes(chars) * PUNTOS_GRUPO;
+  return puntos;
+}
+
 export function afinidadPar(a: Personaje, b: Personaje): number {
   if (a.id === b.id) return 0;
   let puntos = 0;
   for (const key of ADAPT_KEYS) {
     if (enGrupo(a, key) && enGrupo(b, key)) puntos += PUNTOS_GRUPO_APTITUD;
   }
+  puntos += bonusComunes([a, b]);
+  if (a.afinidad?.room === b.id || b.afinidad?.room === a.id) puntos += PUNTOS_ROOM;
   return puntos;
 }
 
@@ -32,6 +67,7 @@ export function afinidadTriple(a: Personaje, b: Personaje, c: Personaje): number
   for (const key of ADAPT_KEYS) {
     if (enGrupo(a, key) && enGrupo(b, key) && enGrupo(c, key)) puntos += PUNTOS_GRUPO_APTITUD;
   }
+  puntos += bonusComunes([a, b, c]);
   return puntos;
 }
 
@@ -44,8 +80,8 @@ export function getAffinityScore(idA: string, idB: string): number {
 }
 
 export function getRango(puntuacion: number): RangoAfinidad {
-  if (puntuacion >= 150) return '◎';
-  if (puntuacion >= 50) return '○';
+  if (puntuacion >= UMBRAL_SOU) return '◎';
+  if (puntuacion >= UMBRAL_MARU) return '○';
   if (puntuacion > 0) return '△';
   return '-';
 }

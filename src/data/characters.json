@@ -34,6 +34,10 @@
         "nombre": "日本一のウマ娘",
         "estrellas": 2
       }
+    },
+    "afinidad": {
+      "dorm": "ritto",
+      "grado": "中3"
     }
   },
   {
@@ -71,6 +75,10 @@
         "nombre": "異次元の逃亡者",
         "estrellas": 3
       }
+    },
+    "afinidad": {
+      "dorm": "ritto",
+      "grado": "高1"
     }
   },
   {
@@ -108,6 +116,10 @@
         "nombre": "絶対はボクだ",
         "estrellas": 2
       }
+    },
+    "afinidad": {
+      "dorm": "ritto",
+      "grado": "中2"
     }
   },
   {
@@ -145,6 +157,10 @@
         "nombre": "名優の証明",
         "estrellas": 2
       }
+    },
+    "afinidad": {
+      "dorm": "ritto",
+      "grado": "中3"
     }
   },
   {
@@ -182,6 +198,10 @@
         "nombre": "プランチャ☆ガナドール",
         "estrellas": 2
       }
+    },
+    "afinidad": {
+      "dorm": "miho",
+      "grado": "中3"
     }
   },
   {
@@ -219,6 +239,10 @@
         "nombre": "一意専心",
         "estrellas": 2
       }
+    },
+    "afinidad": {
+      "dorm": "miho",
+      "grado": "中3"
     }
   },
   {
@@ -256,6 +280,10 @@
         "nombre": "クールスター",
         "estrellas": 2
       }
+    },
+    "afinidad": {
+      "dorm": "ritto",
+      "grado": "高2"
     }
   },
   {
@@ -293,6 +321,10 @@
         "nombre": "皇帝の威光",
         "estrellas": 3
       }
+    },
+    "afinidad": {
+      "dorm": "miho",
+      "grado": "高3"
     }
   },
   {
@@ -330,6 +362,10 @@
         "nombre": "LP1211-M",
         "estrellas": 2
       }
+    },
+    "afinidad": {
+      "dorm": "solo",
+      "grado": "高3"
     }
   },
   {
@@ -367,6 +403,10 @@
         "nombre": "紅のキズナ",
         "estrellas": 2
       }
+    },
+    "afinidad": {
+      "dorm": "ritto",
+      "grado": "中1"
     }
   },
   {
@@ -404,6 +444,10 @@
         "nombre": "ロードオブヴァラー",
         "estrellas": 2
       }
+    },
+    "afinidad": {
+      "dorm": "ritto",
+      "grado": "中1"
     }
   },
   {
@@ -441,6 +485,9 @@
         "nombre": "不沈艦ゴルシ",
         "estrellas": 3
       }
+    },
+    "afinidad": {
+      "dorm": "ritto"
     }
   },
   {
@@ -478,6 +525,10 @@
         "nombre": "勝負のキタサン",
         "estrellas": 2
       }
+    },
+    "afinidad": {
+      "dorm": "ritto",
+      "grado": "中1"
     }
   },
   {
@@ -515,6 +566,10 @@
         "nombre": "キラメキダイヤ",
         "estrellas": 2
       }
+    },
+    "afinidad": {
+      "dorm": "ritto",
+      "grado": "中1"
     }
   },
   {
@@ -552,6 +607,10 @@
         "nombre": "爆走タイキ",
         "estrellas": 2
       }
+    },
+    "afinidad": {
+      "dorm": "miho",
+      "grado": "高1"
     }
   },
   {
@@ -589,6 +648,10 @@
         "nombre": "女帝の舞踏",
         "estrellas": 2
       }
+    },
+    "afinidad": {
+      "dorm": "ritto",
+      "grado": "高2"
     }
   },
   {
@@ -626,6 +689,9 @@
         "nombre": "明日は私の風が吹く",
         "estrellas": 1
       }
+    },
+    "afinidad": {
+      "dorm": "miho"
     }
   },
   {
@@ -663,6 +729,9 @@
         "nombre": "スマートファルコン",
         "estrellas": 2
       }
+    },
+    "afinidad": {
+      "dorm": "ritto"
     }
   },
   {
@@ -737,6 +806,9 @@
         "nombre": "華麗なる舞踏",
         "estrellas": 2
       }
+    },
+    "afinidad": {
+      "dorm": "ritto"
     }
   },
   {
@@ -857,6 +929,9 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto"
     }
   },
   {
@@ -897,6 +972,10 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "miho",
+      "grado": "高1"
     }
   },
   {
@@ -937,6 +1016,9 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto"
     }
   },
   {
@@ -977,6 +1059,10 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto",
+      "grado": "高2"
     }
   },
   {
@@ -1017,6 +1103,10 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto",
+      "grado": "中2"
     }
   },
   {
@@ -1057,6 +1147,9 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto"
     }
   },
   {
@@ -1097,6 +1190,9 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "miho"
     }
   },
   {
@@ -1137,6 +1233,10 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto",
+      "grado": "中3"
     }
   },
   {
@@ -1177,6 +1277,10 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto",
+      "grado": "中2"
     }
   },
   {
@@ -1217,6 +1321,10 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto",
+      "grado": "高2"
     }
   },
   {
@@ -1257,6 +1365,9 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto"
     }
   },
   {
@@ -1297,6 +1408,10 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto",
+      "grado": "中3"
     }
   },
   {
@@ -1337,6 +1452,9 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto"
     }
   },
   {
@@ -1377,6 +1495,9 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto"
     }
   },
   {
@@ -1497,6 +1618,9 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto"
     }
   },
   {
@@ -1537,6 +1661,9 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto"
     }
   },
   {
@@ -1617,6 +1744,10 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto",
+      "grado": "中2"
     }
   },
   {
@@ -1697,6 +1828,10 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto",
+      "grado": "高2"
     }
   },
   {
@@ -1737,6 +1872,10 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto",
+      "grado": "高3"
     }
   },
   {
@@ -1817,6 +1956,9 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto"
     }
   },
   {
@@ -1857,6 +1999,9 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "miho"
     }
   },
   {
@@ -1937,6 +2082,10 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto",
+      "grado": "高2"
     }
   },
   {
@@ -1977,6 +2126,9 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "miho"
     }
   },
   {
@@ -2017,6 +2169,10 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto",
+      "grado": "中2"
     }
   },
   {
@@ -2097,6 +2253,10 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto",
+      "grado": "高1"
     }
   },
   {
@@ -2137,6 +2297,9 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto"
     }
   },
   {
@@ -2177,6 +2340,10 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "miho",
+      "grado": "高2"
     }
   },
   {
@@ -2217,6 +2384,10 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto",
+      "grado": "中2"
     }
   },
   {
@@ -2257,6 +2428,10 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto",
+      "grado": "高3"
     }
   },
   {
@@ -2297,6 +2472,9 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto"
     }
   },
   {
@@ -2337,6 +2515,10 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "miho",
+      "grado": "高1"
     }
   },
   {
@@ -2377,6 +2559,10 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto",
+      "grado": "高3"
     }
   },
   {
@@ -2417,6 +2603,9 @@
         "nombre": "",
         "estrellas": 0
       }
+    },
+    "afinidad": {
+      "dorm": "ritto"
     }
   }
 ]

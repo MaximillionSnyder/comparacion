@@ -13,6 +13,9 @@ dist-ssr
 *.local
 *.jks
 
+# Release signing keystore (backup at Documents/uma-compara-release.jks)
+android/keystore.jks
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

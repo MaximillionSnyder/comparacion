@@ -47,6 +47,19 @@ export interface Adaptabilidad {
   end: 0 | 1 | 2 | 3;
 }
 
+export type Dormitorio = 'ritto' | 'miho' | 'solo';
+
+export interface AfinidadMetadata {
+  /** 所属寮: ritto (栗東寮), miho (美浦寮), solo (一人暮らし, p.ej. マルゼンスキー). */
+  dorm?: Dormitorio;
+  /** 学年 en el momento del perfil (p.ej. '中2', '高1'). Solo coincide si es el mismo valor exacto. */
+  grado?: string;
+  /** 仲間 / クラス grupos de relación (p.ej. 'メジロ家'). Bonus +1 por grupo coincidente. */
+  grupos?: string[];
+  /** 同室: id del room-mate (bonus de pareja +2, solo afecta afinidad entre los dos). */
+  room?: string;
+}
+
 export interface Personaje {
   id: string;
   nombre: LocalizedText;
@@ -56,6 +69,8 @@ export interface Personaje {
   estilo: 'front' | 'pace' | 'late' | 'end';
   adaptabilidad: Adaptabilidad;
   factoresDefault: FactoresDefault;
+  /** Metadatos opcionales para replicar la fórmula real de 相性 (bonus 共通 y de pareja). */
+  afinidad?: AfinidadMetadata;
 }
 
 export interface Nodo {
