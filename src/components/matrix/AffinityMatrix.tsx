@@ -1,11 +1,25 @@
 import { useMemo } from 'react';
 import type { Arbol } from '../../types';
 import { POSICIONES_ANCESTROS, POS_LABELS } from '../../types';
-import { getAffinityScore } from '../../utils/affinityCalculator';
+import { getAffinityScore, getRango } from '../../utils/affinityCalculator';
 import { getPersonajeNombre } from '../../utils/characterLabels';
 
 interface AffinityMatrixProps {
   arbol: Arbol;
+}
+
+function pairColor(score: number): string {
+  if (score === 0) return 'bg-gray-800/60 text-gray-600 border-gray-700/40';
+  if (score < 21) return 'bg-orange-500/10 text-orange-300 border-orange-400/25';
+  if (score < 35) return 'bg-amber-500/10 text-amber-300 border-amber-400/25';
+  return 'bg-emerald-500/10 text-emerald-300 border-emerald-400/25';
+}
+
+function rangoColor(rango: string): string {
+  if (rango === '◎') return 'text-amber-300';
+  if (rango === '○') return 'text-orange-300';
+  if (rango === '△') return 'text-gray-400';
+  return 'text-gray-600';
 }
 
 export default function AffinityMatrix({ arbol }: AffinityMatrixProps) {
@@ -21,6 +35,23 @@ export default function AffinityMatrix({ arbol }: AffinityMatrixProps) {
 
   const objetivo = arbol.objetivo.personaje;
 
+  const allChars = useMemo(() => {
+    if (!objetivo) return [];
+    return [objetivo, ...ancestros.map((a) => a.personaje)];
+  }, [objetivo, ancestros]);
+
+  const maxScore = useMemo(() => {
+    let max = 0;
+    for (const rowChar of allChars) {
+      for (const colChar of allChars) {
+        if (rowChar.id === colChar.id) continue;
+        const score = getAffinityScore(rowChar.id, colChar.id);
+        if (score > max) max = score;
+      }
+    }
+    return max;
+  }, [allChars]);
+
   if (!objetivo) {
     return (
       <div className="text-center py-16 px-4 animate-fade-in">
@@ -33,7 +64,7 @@ export default function AffinityMatrix({ arbol }: AffinityMatrixProps) {
     );
   }
 
-  if (ancestros.length === 0) {
+  if (allChars.length <= 1) {
     return (
       <div className="text-center py-16 px-4 animate-fade-in">
         <p className="text-gray-400 font-medium">Aún no hay legacies</p>
@@ -43,17 +74,6 @@ export default function AffinityMatrix({ arbol }: AffinityMatrixProps) {
       </div>
     );
   }
-
-  const getAffinity = (idA: string, idB: string): number => getAffinityScore(idA, idB);
-
-  const allChars = [objetivo, ...ancestros.map((a) => a.personaje)];
-
-  const pairColor = (score: number): string => {
-    if (score === 0) return 'bg-gray-800/60 text-gray-600 border-gray-700/40';
-    if (score < 21) return 'bg-orange-500/10 text-orange-300 border-orange-400/25';
-    if (score < 35) return 'bg-amber-500/10 text-amber-300 border-amber-400/25';
-    return 'bg-emerald-500/10 text-emerald-300 border-emerald-400/25';
-  };
 
   return (
     <div className="overflow-x-auto rounded-2xl border border-gray-800 bg-gray-900/40 animate-fade-in">
@@ -101,11 +121,23 @@ export default function AffinityMatrix({ arbol }: AffinityMatrixProps) {
                   </div>
                 </td>
                 {allChars.map((colChar, ci) => {
-                  const score = getAffinity(rowChar.id, colChar.id);
+                  const score = getAffinityScore(rowChar.id, colChar.id);
+                  const isDiagonal = rowChar.id === colChar.id;
+                  const rango = getRango(score);
+                  const isBest = maxScore > 0 && score === maxScore;
                   return (
                     <td key={ci} className="p-2.5 border-b border-gray-800/80 text-center">
-                      <span className={`inline-flex items-center justify-center min-w-9 px-2 py-1 rounded-lg text-sm font-bold border tabular-nums ${pairColor(score)}`}>
-                        {score}
+                      <span
+                        className={`inline-flex items-center justify-center min-w-9 px-2 py-1 rounded-lg text-sm font-bold border tabular-nums ${pairColor(score)} ${isBest ? 'ring-2 ring-amber-400/60 shadow-lg shadow-amber-500/20' : ''}`}
+                      >
+                        {isDiagonal ? (
+                          <span className="text-gray-700 text-xs">—</span>
+                        ) : (
+                          <span className="flex items-baseline gap-0.5">
+                            <span>{score}</span>
+                            <span className={`text-[10px] font-normal ${rangoColor(rango)}`}>{rango}</span>
+                          </span>
+                        )}
                       </span>
                     </td>
                   );
@@ -115,6 +147,33 @@ export default function AffinityMatrix({ arbol }: AffinityMatrixProps) {
           })}
         </tbody>
       </table>
+
+      <div className="border-t border-gray-800/80 px-4 py-3 flex flex-wrap items-center gap-4 text-[10px] text-gray-500">
+        <span className="font-semibold text-gray-400 uppercase tracking-wider">Leyenda</span>
+        <span className="flex items-center gap-1.5">
+          <span className="w-3 h-3 rounded bg-gray-800/60 border border-gray-700/40 inline-block" />
+          Sin afinidad
+        </span>
+        <span className="flex items-center gap-1.5">
+          <span className="w-3 h-3 rounded bg-orange-500/10 border border-orange-400/25 inline-block" />
+          Baja (&lt;21)
+        </span>
+        <span className="flex items-center gap-1.5">
+          <span className="w-3 h-3 rounded bg-amber-500/10 border border-amber-400/25 inline-block" />
+          Media (&lt;35)
+        </span>
+        <span className="flex items-center gap-1.5">
+          <span className="w-3 h-3 rounded bg-emerald-500/10 border border-emerald-400/25 inline-block" />
+          Alta (≥35)
+        </span>
+        <span className="ml-auto flex items-center gap-1.5">
+          <span className="w-3 h-3 rounded-full ring-2 ring-amber-400/60 inline-block" />
+          Mejor combinación
+        </span>
+        <span className="text-gray-600">
+          Rangos: ◎ ≥151 · ○ ≥51 · △ &lt;51 · – 0
+        </span>
+      </div>
     </div>
   );
 }
