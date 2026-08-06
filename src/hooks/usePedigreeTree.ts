@@ -50,9 +50,9 @@ const cargarArbol = (): Arbol => {
       if (!personaje) continue;
       arbol[pos] = {
         personaje,
-        factorAzul: nodoGuardado.factorAzul ?? { ...personaje.factoresDefault.azul },
-        factorRojo: nodoGuardado.factorRojo ?? { ...personaje.factoresDefault.rojo },
-        factorVerde: nodoGuardado.factorVerde ?? { ...personaje.factoresDefault.verde },
+        factorAzul: nodoGuardado.factorAzul ?? { tipo: personaje.factoresDefault.azul.tipo, estrellas: 0 },
+        factorRojo: nodoGuardado.factorRojo ?? { tipo: personaje.factoresDefault.rojo.tipo, estrellas: 0 },
+        factorVerde: nodoGuardado.factorVerde ?? { nombre: personaje.factoresDefault.verde.nombre, estrellas: 0 },
       };
     }
     return arbol;
@@ -89,9 +89,9 @@ export function usePedigreeTree() {
       ...prev,
       [posicion]: {
         personaje,
-        factorAzul: { ...personaje.factoresDefault.azul },
-        factorRojo: { ...personaje.factoresDefault.rojo },
-        factorVerde: { ...personaje.factoresDefault.verde },
+        factorAzul: { tipo: personaje.factoresDefault.azul.tipo, estrellas: 0 },
+        factorRojo: { tipo: personaje.factoresDefault.rojo.tipo, estrellas: 0 },
+        factorVerde: { nombre: personaje.factoresDefault.verde.nombre, estrellas: 0 },
       },
     }));
   }, []);

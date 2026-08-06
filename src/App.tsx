@@ -150,7 +150,6 @@ function App() {
             if (arbol[s].personaje?.id === char.id) clearPersonaje(s);
           }
           setPersonaje(modalSelector, char);
-          if (modalSelector === 'objetivo') autoFillFactores('objetivo');
         }}
         posicion={modalSelector ? POS_LABELS[modalSelector] : ''}
         excludeIds={modalSelector
