@@ -8,18 +8,18 @@
     },
     "avatarColor": "#E74C3C",
     "distancia": "medium",
-    "estilo": "front",
+    "estilo": "pace",
     "adaptabilidad": {
-      "turf": 3,
-      "dirt": 1,
-      "sprint": 0,
-      "mile": 2,
-      "medium": 3,
-      "long": 1,
-      "front": 3,
-      "pace": 1,
-      "late": 0,
-      "end": 0
+      "turf": 6,
+      "dirt": 0,
+      "sprint": 1,
+      "mile": 4,
+      "medium": 6,
+      "long": 6,
+      "front": 0,
+      "pace": 6,
+      "late": 6,
+      "end": 4
     },
     "factoresDefault": {
       "azul": {
@@ -48,18 +48,18 @@
       "ja": "サイレンススズカ"
     },
     "avatarColor": "#3498DB",
-    "distancia": "medium",
-    "estilo": "pace",
+    "distancia": "mile",
+    "estilo": "front",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
-      "sprint": 0,
-      "mile": 2,
-      "medium": 3,
-      "long": 1,
-      "front": 0,
-      "pace": 3,
-      "late": 0,
+      "sprint": 3,
+      "mile": 6,
+      "medium": 6,
+      "long": 2,
+      "front": 6,
+      "pace": 4,
+      "late": 2,
       "end": 0
     },
     "factoresDefault": {
@@ -90,18 +90,18 @@
     },
     "avatarColor": "#E91E63",
     "distancia": "medium",
-    "estilo": "front",
+    "estilo": "pace",
     "adaptabilidad": {
-      "turf": 2,
-      "dirt": 1,
-      "sprint": 0,
+      "turf": 6,
+      "dirt": 0,
+      "sprint": 1,
       "mile": 2,
-      "medium": 3,
-      "long": 1,
+      "medium": 6,
+      "long": 5,
       "front": 3,
-      "pace": 0,
-      "late": 0,
-      "end": 0
+      "pace": 6,
+      "late": 4,
+      "end": 2
     },
     "factoresDefault": {
       "azul": {
@@ -130,19 +130,19 @@
       "ja": "メジロマックイーン"
     },
     "avatarColor": "#9B59B6",
-    "distancia": "long",
-    "estilo": "front",
+    "distancia": "medium",
+    "estilo": "pace",
     "adaptabilidad": {
-      "turf": 2,
-      "dirt": 0,
+      "turf": 6,
+      "dirt": 2,
       "sprint": 0,
       "mile": 1,
-      "medium": 2,
-      "long": 3,
-      "front": 3,
-      "pace": 0,
-      "late": 0,
-      "end": 0
+      "medium": 6,
+      "long": 6,
+      "front": 5,
+      "pace": 6,
+      "late": 3,
+      "end": 1
     },
     "factoresDefault": {
       "azul": {
@@ -174,16 +174,16 @@
     "distancia": "mile",
     "estilo": "pace",
     "adaptabilidad": {
-      "turf": 2,
-      "dirt": 1,
-      "sprint": 0,
-      "mile": 3,
-      "medium": 2,
-      "long": 1,
-      "front": 1,
-      "pace": 3,
-      "late": 0,
-      "end": 0
+      "turf": 6,
+      "dirt": 5,
+      "sprint": 1,
+      "mile": 6,
+      "medium": 6,
+      "long": 5,
+      "front": 2,
+      "pace": 6,
+      "late": 6,
+      "end": 4
     },
     "factoresDefault": {
       "azul": {
@@ -212,18 +212,18 @@
       "ja": "グラスワンダー"
     },
     "avatarColor": "#27AE60",
-    "distancia": "medium",
-    "estilo": "late",
+    "distancia": "mile",
+    "estilo": "pace",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
       "sprint": 0,
-      "mile": 2,
-      "medium": 3,
-      "long": 1,
-      "front": 0,
-      "pace": 0,
-      "late": 3,
+      "mile": 6,
+      "medium": 5,
+      "long": 6,
+      "front": 1,
+      "pace": 6,
+      "late": 6,
       "end": 1
     },
     "factoresDefault": {
@@ -253,19 +253,19 @@
       "ja": "オグリキャップ"
     },
     "avatarColor": "#95A5A6",
-    "distancia": "medium",
-    "estilo": "front",
+    "distancia": "mile",
+    "estilo": "pace",
     "adaptabilidad": {
-      "turf": 2,
-      "dirt": 2,
-      "sprint": 0,
-      "mile": 2,
-      "medium": 3,
-      "long": 1,
-      "front": 3,
-      "pace": 1,
-      "late": 0,
-      "end": 0
+      "turf": 6,
+      "dirt": 5,
+      "sprint": 2,
+      "mile": 6,
+      "medium": 6,
+      "long": 5,
+      "front": 1,
+      "pace": 6,
+      "late": 6,
+      "end": 3
     },
     "factoresDefault": {
       "azul": {
@@ -294,19 +294,19 @@
       "ja": "シンボリルドルフ"
     },
     "avatarColor": "#1ABC9C",
-    "distancia": "long",
-    "estilo": "front",
+    "distancia": "medium",
+    "estilo": "pace",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
-      "sprint": 0,
-      "mile": 1,
-      "medium": 2,
-      "long": 3,
-      "front": 3,
-      "pace": 0,
-      "late": 0,
-      "end": 0
+      "sprint": 2,
+      "mile": 4,
+      "medium": 6,
+      "long": 6,
+      "front": 5,
+      "pace": 6,
+      "late": 6,
+      "end": 4
     },
     "factoresDefault": {
       "azul": {
@@ -336,16 +336,16 @@
     },
     "avatarColor": "#E67E22",
     "distancia": "mile",
-    "estilo": "pace",
+    "estilo": "front",
     "adaptabilidad": {
-      "turf": 2,
-      "dirt": 0,
-      "sprint": 1,
-      "mile": 3,
-      "medium": 1,
-      "long": 0,
-      "front": 0,
-      "pace": 3,
+      "turf": 6,
+      "dirt": 3,
+      "sprint": 5,
+      "mile": 6,
+      "medium": 5,
+      "long": 4,
+      "front": 6,
+      "pace": 2,
       "late": 0,
       "end": 0
     },
@@ -377,17 +377,17 @@
     },
     "avatarColor": "#C0392B",
     "distancia": "mile",
-    "estilo": "pace",
+    "estilo": "front",
     "adaptabilidad": {
-      "turf": 2,
+      "turf": 6,
       "dirt": 0,
-      "sprint": 0,
-      "mile": 3,
-      "medium": 2,
-      "long": 1,
-      "front": 0,
-      "pace": 3,
-      "late": 0,
+      "sprint": 1,
+      "mile": 6,
+      "medium": 6,
+      "long": 5,
+      "front": 6,
+      "pace": 6,
+      "late": 2,
       "end": 0
     },
     "factoresDefault": {
@@ -420,16 +420,16 @@
     "distancia": "mile",
     "estilo": "late",
     "adaptabilidad": {
-      "turf": 2,
-      "dirt": 1,
-      "sprint": 0,
-      "mile": 3,
-      "medium": 2,
-      "long": 0,
-      "front": 0,
-      "pace": 1,
-      "late": 3,
-      "end": 0
+      "turf": 6,
+      "dirt": 0,
+      "sprint": 1,
+      "mile": 6,
+      "medium": 6,
+      "long": 1,
+      "front": 4,
+      "pace": 5,
+      "late": 6,
+      "end": 1
     },
     "factoresDefault": {
       "azul": {
@@ -458,19 +458,19 @@
       "ja": "ゴールドシップ"
     },
     "avatarColor": "#F1C40F",
-    "distancia": "long",
+    "distancia": "medium",
     "estilo": "end",
     "adaptabilidad": {
-      "turf": 2,
-      "dirt": 1,
+      "turf": 6,
+      "dirt": 0,
       "sprint": 0,
-      "mile": 0,
-      "medium": 2,
-      "long": 3,
+      "mile": 4,
+      "medium": 6,
+      "long": 6,
       "front": 0,
-      "pace": 0,
-      "late": 0,
-      "end": 3
+      "pace": 5,
+      "late": 5,
+      "end": 6
     },
     "factoresDefault": {
       "azul": {
@@ -501,15 +501,15 @@
     "distancia": "medium",
     "estilo": "front",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
-      "sprint": 0,
-      "mile": 2,
-      "medium": 3,
-      "long": 1,
-      "front": 3,
-      "pace": 0,
-      "late": 0,
+      "sprint": 2,
+      "mile": 4,
+      "medium": 6,
+      "long": 6,
+      "front": 6,
+      "pace": 5,
+      "late": 4,
       "end": 0
     },
     "factoresDefault": {
@@ -539,19 +539,19 @@
       "ja": "サトノダイヤモンド"
     },
     "avatarColor": "#8E44AD",
-    "distancia": "long",
-    "estilo": "front",
+    "distancia": "medium",
+    "estilo": "late",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
       "sprint": 0,
-      "mile": 1,
-      "medium": 2,
-      "long": 3,
-      "front": 3,
-      "pace": 0,
-      "late": 0,
-      "end": 0
+      "mile": 4,
+      "medium": 6,
+      "long": 6,
+      "front": 0,
+      "pace": 5,
+      "late": 6,
+      "end": 3
     },
     "factoresDefault": {
       "azul": {
@@ -583,15 +583,15 @@
     "distancia": "sprint",
     "estilo": "pace",
     "adaptabilidad": {
-      "turf": 1,
-      "dirt": 2,
-      "sprint": 3,
-      "mile": 2,
-      "medium": 0,
+      "turf": 6,
+      "dirt": 5,
+      "sprint": 6,
+      "mile": 6,
+      "medium": 2,
       "long": 0,
-      "front": 0,
-      "pace": 3,
-      "late": 0,
+      "front": 4,
+      "pace": 6,
+      "late": 2,
       "end": 0
     },
     "factoresDefault": {
@@ -622,17 +622,17 @@
     },
     "avatarColor": "#16A085",
     "distancia": "medium",
-    "estilo": "late",
+    "estilo": "pace",
     "adaptabilidad": {
-      "turf": 2,
+      "turf": 6,
       "dirt": 0,
-      "sprint": 0,
-      "mile": 2,
-      "medium": 3,
-      "long": 1,
-      "front": 0,
-      "pace": 1,
-      "late": 3,
+      "sprint": 4,
+      "mile": 5,
+      "medium": 6,
+      "long": 2,
+      "front": 3,
+      "pace": 6,
+      "late": 6,
       "end": 0
     },
     "factoresDefault": {
@@ -663,18 +663,18 @@
     },
     "avatarColor": "#7F8C8D",
     "distancia": "medium",
-    "estilo": "end",
+    "estilo": "pace",
     "adaptabilidad": {
-      "turf": 1,
-      "dirt": 2,
-      "sprint": 0,
-      "mile": 1,
-      "medium": 2,
-      "long": 1,
-      "front": 0,
-      "pace": 0,
-      "late": 1,
-      "end": 3
+      "turf": 6,
+      "dirt": 0,
+      "sprint": 2,
+      "mile": 4,
+      "medium": 6,
+      "long": 5,
+      "front": 1,
+      "pace": 6,
+      "late": 6,
+      "end": 1
     },
     "factoresDefault": {
       "azul": {
@@ -702,16 +702,16 @@
       "ja": "スマートファルコン"
     },
     "avatarColor": "#E74C3C",
-    "distancia": "sprint",
-    "estilo": "pace",
+    "distancia": "mile",
+    "estilo": "front",
     "adaptabilidad": {
-      "turf": 1,
-      "dirt": 3,
-      "sprint": 3,
-      "mile": 2,
-      "medium": 0,
-      "long": 0,
-      "front": 0,
+      "turf": 2,
+      "dirt": 6,
+      "sprint": 5,
+      "mile": 6,
+      "medium": 6,
+      "long": 2,
+      "front": 6,
       "pace": 3,
       "late": 0,
       "end": 0
@@ -742,19 +742,19 @@
       "ja": "ナリタブライアン"
     },
     "avatarColor": "#34495E",
-    "distancia": "long",
-    "estilo": "front",
+    "distancia": "medium",
+    "estilo": "pace",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
-      "sprint": 0,
-      "mile": 1,
-      "medium": 2,
-      "long": 3,
-      "front": 3,
-      "pace": 0,
-      "late": 0,
-      "end": 0
+      "sprint": 1,
+      "mile": 5,
+      "medium": 6,
+      "long": 6,
+      "front": 0,
+      "pace": 6,
+      "late": 6,
+      "end": 3
     },
     "factoresDefault": {
       "azul": {
@@ -780,18 +780,18 @@
     },
     "avatarColor": "#F78FB3",
     "distancia": "mile",
-    "estilo": "late",
+    "estilo": "pace",
     "adaptabilidad": {
-      "turf": 2,
+      "turf": 6,
       "dirt": 0,
       "sprint": 1,
-      "mile": 3,
-      "medium": 1,
-      "long": 0,
-      "front": 0,
-      "pace": 0,
-      "late": 3,
-      "end": 1
+      "mile": 6,
+      "medium": 6,
+      "long": 4,
+      "front": 3,
+      "pace": 6,
+      "late": 2,
+      "end": 4
     },
     "factoresDefault": {
       "azul": {
@@ -825,15 +825,15 @@
     "distancia": "mile",
     "estilo": "front",
     "adaptabilidad": {
-      "turf": 0,
-      "dirt": 3,
-      "sprint": 1,
-      "mile": 3,
-      "medium": 3,
+      "turf": 1,
+      "dirt": 6,
+      "sprint": 4,
+      "mile": 6,
+      "medium": 6,
       "long": 0,
-      "front": 3,
-      "pace": 3,
-      "late": 1,
+      "front": 6,
+      "pace": 6,
+      "late": 4,
       "end": 0
     },
     "factoresDefault": {
@@ -865,16 +865,16 @@
     "distancia": "sprint",
     "estilo": "late",
     "adaptabilidad": {
-      "turf": 3,
-      "dirt": 0,
-      "sprint": 3,
-      "mile": 3,
-      "medium": 1,
+      "turf": 6,
+      "dirt": 3,
+      "sprint": 6,
+      "mile": 6,
+      "medium": 4,
       "long": 0,
       "front": 0,
-      "pace": 0,
-      "late": 3,
-      "end": 1
+      "pace": 2,
+      "late": 6,
+      "end": 4
     },
     "factoresDefault": {
       "azul": {
@@ -905,16 +905,16 @@
     "distancia": "medium",
     "estilo": "late",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
       "sprint": 0,
-      "mile": 0,
-      "medium": 3,
-      "long": 3,
+      "mile": 2,
+      "medium": 6,
+      "long": 6,
       "front": 0,
-      "pace": 1,
-      "late": 3,
-      "end": 3
+      "pace": 4,
+      "late": 6,
+      "end": 6
     },
     "factoresDefault": {
       "azul": {
@@ -948,15 +948,15 @@
     "distancia": "mile",
     "estilo": "late",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
-      "sprint": 0,
-      "mile": 3,
-      "medium": 3,
-      "long": 0,
-      "front": 1,
-      "pace": 2,
-      "late": 3,
+      "sprint": 2,
+      "mile": 6,
+      "medium": 6,
+      "long": 1,
+      "front": 4,
+      "pace": 5,
+      "late": 6,
       "end": 0
     },
     "factoresDefault": {
@@ -992,16 +992,16 @@
     "distancia": "mile",
     "estilo": "late",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
-      "sprint": 0,
-      "mile": 3,
-      "medium": 3,
-      "long": 0,
+      "sprint": 2,
+      "mile": 6,
+      "medium": 6,
+      "long": 3,
       "front": 0,
       "pace": 0,
-      "late": 3,
-      "end": 3
+      "late": 6,
+      "end": 6
     },
     "factoresDefault": {
       "azul": {
@@ -1035,16 +1035,16 @@
     "distancia": "medium",
     "estilo": "end",
     "adaptabilidad": {
-      "turf": 3,
-      "dirt": 3,
-      "sprint": 0,
-      "mile": 2,
-      "medium": 3,
-      "long": 3,
+      "turf": 6,
+      "dirt": 6,
+      "sprint": 1,
+      "mile": 5,
+      "medium": 6,
+      "long": 6,
       "front": 0,
-      "pace": 2,
-      "late": 2,
-      "end": 3
+      "pace": 5,
+      "late": 5,
+      "end": 6
     },
     "factoresDefault": {
       "azul": {
@@ -1079,15 +1079,15 @@
     "distancia": "sprint",
     "estilo": "pace",
     "adaptabilidad": {
-      "turf": 3,
-      "dirt": 0,
-      "sprint": 3,
-      "mile": 0,
+      "turf": 6,
+      "dirt": 1,
+      "sprint": 6,
+      "mile": 3,
       "medium": 0,
       "long": 0,
-      "front": 2,
-      "pace": 3,
-      "late": 0,
+      "front": 5,
+      "pace": 6,
+      "late": 2,
       "end": 0
     },
     "factoresDefault": {
@@ -1123,15 +1123,15 @@
     "distancia": "medium",
     "estilo": "front",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
       "sprint": 0,
-      "mile": 0,
-      "medium": 3,
-      "long": 3,
-      "front": 3,
-      "pace": 0,
-      "late": 0,
+      "mile": 1,
+      "medium": 6,
+      "long": 6,
+      "front": 6,
+      "pace": 2,
+      "late": 1,
       "end": 0
     },
     "factoresDefault": {
@@ -1166,14 +1166,14 @@
     "distancia": "mile",
     "estilo": "front",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
       "sprint": 0,
-      "mile": 3,
-      "medium": 3,
-      "long": 1,
-      "front": 3,
-      "pace": 1,
+      "mile": 6,
+      "medium": 6,
+      "long": 4,
+      "front": 6,
+      "pace": 4,
       "late": 0,
       "end": 0
     },
@@ -1209,16 +1209,16 @@
     "distancia": "sprint",
     "estilo": "late",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
-      "sprint": 3,
-      "mile": 2,
-      "medium": 2,
-      "long": 1,
+      "sprint": 6,
+      "mile": 5,
+      "medium": 5,
+      "long": 4,
       "front": 0,
-      "pace": 2,
-      "late": 3,
-      "end": 0
+      "pace": 5,
+      "late": 6,
+      "end": 3
     },
     "factoresDefault": {
       "azul": {
@@ -1253,16 +1253,16 @@
     "distancia": "medium",
     "estilo": "late",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
       "sprint": 0,
-      "mile": 1,
-      "medium": 3,
-      "long": 3,
-      "front": 0,
-      "pace": 2,
-      "late": 3,
-      "end": 0
+      "mile": 4,
+      "medium": 6,
+      "long": 6,
+      "front": 1,
+      "pace": 5,
+      "late": 6,
+      "end": 3
     },
     "factoresDefault": {
       "azul": {
@@ -1297,15 +1297,15 @@
     "distancia": "medium",
     "estilo": "pace",
     "adaptabilidad": {
-      "turf": 3,
-      "dirt": 0,
+      "turf": 6,
+      "dirt": 2,
       "sprint": 0,
-      "mile": 2,
-      "medium": 3,
-      "long": 0,
-      "front": 0,
-      "pace": 3,
-      "late": 3,
+      "mile": 5,
+      "medium": 6,
+      "long": 2,
+      "front": 1,
+      "pace": 6,
+      "late": 6,
       "end": 0
     },
     "factoresDefault": {
@@ -1341,15 +1341,15 @@
     "distancia": "sprint",
     "estilo": "pace",
     "adaptabilidad": {
-      "turf": 3,
-      "dirt": 0,
-      "sprint": 3,
-      "mile": 3,
-      "medium": 0,
+      "turf": 6,
+      "dirt": 1,
+      "sprint": 6,
+      "mile": 6,
+      "medium": 2,
       "long": 0,
-      "front": 0,
-      "pace": 3,
-      "late": 3,
+      "front": 1,
+      "pace": 6,
+      "late": 6,
       "end": 0
     },
     "factoresDefault": {
@@ -1384,16 +1384,16 @@
     "distancia": "medium",
     "estilo": "front",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
       "sprint": 0,
-      "mile": 1,
-      "medium": 3,
-      "long": 3,
-      "front": 3,
-      "pace": 2,
-      "late": 0,
-      "end": 0
+      "mile": 4,
+      "medium": 6,
+      "long": 6,
+      "front": 6,
+      "pace": 5,
+      "late": 3,
+      "end": 2
     },
     "factoresDefault": {
       "azul": {
@@ -1428,15 +1428,15 @@
     "distancia": "mile",
     "estilo": "pace",
     "adaptabilidad": {
-      "turf": 3,
-      "dirt": 0,
-      "sprint": 2,
-      "mile": 3,
-      "medium": 2,
-      "long": 0,
-      "front": 1,
-      "pace": 3,
-      "late": 1,
+      "turf": 6,
+      "dirt": 1,
+      "sprint": 5,
+      "mile": 6,
+      "medium": 5,
+      "long": 2,
+      "front": 4,
+      "pace": 6,
+      "late": 4,
       "end": 0
     },
     "factoresDefault": {
@@ -1471,16 +1471,16 @@
     "distancia": "medium",
     "estilo": "late",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
-      "sprint": 0,
-      "mile": 1,
-      "medium": 3,
-      "long": 3,
+      "sprint": 1,
+      "mile": 4,
+      "medium": 6,
+      "long": 6,
       "front": 0,
-      "pace": 0,
-      "late": 3,
-      "end": 3
+      "pace": 3,
+      "late": 6,
+      "end": 6
     },
     "factoresDefault": {
       "azul": {
@@ -1514,16 +1514,16 @@
     "distancia": "medium",
     "estilo": "end",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
-      "sprint": 0,
-      "mile": 1,
-      "medium": 3,
-      "long": 1,
+      "sprint": 1,
+      "mile": 4,
+      "medium": 6,
+      "long": 4,
       "front": 0,
       "pace": 0,
-      "late": 2,
-      "end": 3
+      "late": 5,
+      "end": 6
     },
     "factoresDefault": {
       "azul": {
@@ -1554,15 +1554,15 @@
     "distancia": "medium",
     "estilo": "pace",
     "adaptabilidad": {
-      "turf": 3,
-      "dirt": 0,
-      "sprint": 0,
-      "mile": 2,
-      "medium": 3,
-      "long": 0,
-      "front": 1,
-      "pace": 3,
-      "late": 0,
+      "turf": 6,
+      "dirt": 1,
+      "sprint": 2,
+      "mile": 5,
+      "medium": 6,
+      "long": 3,
+      "front": 4,
+      "pace": 6,
+      "late": 3,
       "end": 0
     },
     "factoresDefault": {
@@ -1594,16 +1594,16 @@
     "distancia": "medium",
     "estilo": "late",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
       "sprint": 0,
-      "mile": 0,
-      "medium": 3,
-      "long": 3,
+      "mile": 1,
+      "medium": 6,
+      "long": 6,
       "front": 0,
-      "pace": 2,
-      "late": 3,
-      "end": 1
+      "pace": 5,
+      "late": 6,
+      "end": 4
     },
     "factoresDefault": {
       "azul": {
@@ -1637,14 +1637,14 @@
     "distancia": "medium",
     "estilo": "front",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
-      "sprint": 1,
-      "mile": 2,
-      "medium": 3,
-      "long": 2,
-      "front": 3,
-      "pace": 0,
+      "sprint": 4,
+      "mile": 5,
+      "medium": 6,
+      "long": 5,
+      "front": 6,
+      "pace": 2,
       "late": 0,
       "end": 0
     },
@@ -1680,15 +1680,15 @@
     "distancia": "mile",
     "estilo": "pace",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
-      "sprint": 0,
-      "mile": 3,
-      "medium": 3,
-      "long": 0,
-      "front": 2,
-      "pace": 3,
-      "late": 0,
+      "sprint": 2,
+      "mile": 6,
+      "medium": 6,
+      "long": 2,
+      "front": 5,
+      "pace": 6,
+      "late": 1,
       "end": 0
     },
     "factoresDefault": {
@@ -1720,15 +1720,15 @@
     "distancia": "medium",
     "estilo": "pace",
     "adaptabilidad": {
-      "turf": 3,
-      "dirt": 0,
+      "turf": 6,
+      "dirt": 2,
       "sprint": 0,
-      "mile": 0,
-      "medium": 3,
-      "long": 3,
-      "front": 1,
-      "pace": 3,
-      "late": 3,
+      "mile": 2,
+      "medium": 6,
+      "long": 6,
+      "front": 4,
+      "pace": 6,
+      "late": 6,
       "end": 0
     },
     "factoresDefault": {
@@ -1765,15 +1765,15 @@
     "estilo": "late",
     "adaptabilidad": {
       "turf": 0,
-      "dirt": 3,
-      "sprint": 3,
-      "mile": 2,
+      "dirt": 6,
+      "sprint": 6,
+      "mile": 5,
       "medium": 0,
       "long": 0,
       "front": 0,
       "pace": 0,
-      "late": 3,
-      "end": 2
+      "late": 6,
+      "end": 5
     },
     "factoresDefault": {
       "azul": {
@@ -1804,16 +1804,16 @@
     "distancia": "medium",
     "estilo": "pace",
     "adaptabilidad": {
-      "turf": 3,
-      "dirt": 0,
+      "turf": 6,
+      "dirt": 1,
       "sprint": 0,
-      "mile": 0,
-      "medium": 3,
-      "long": 3,
+      "mile": 2,
+      "medium": 6,
+      "long": 6,
       "front": 0,
-      "pace": 3,
-      "late": 3,
-      "end": 3
+      "pace": 6,
+      "late": 6,
+      "end": 6
     },
     "factoresDefault": {
       "azul": {
@@ -1848,16 +1848,16 @@
     "distancia": "medium",
     "estilo": "pace",
     "adaptabilidad": {
-      "turf": 3,
-      "dirt": 0,
-      "sprint": 0,
-      "mile": 1,
-      "medium": 3,
-      "long": 3,
-      "front": 0,
-      "pace": 3,
-      "late": 2,
-      "end": 0
+      "turf": 6,
+      "dirt": 1,
+      "sprint": 1,
+      "mile": 4,
+      "medium": 6,
+      "long": 6,
+      "front": 2,
+      "pace": 6,
+      "late": 5,
+      "end": 2
     },
     "factoresDefault": {
       "azul": {
@@ -1892,15 +1892,15 @@
     "distancia": "medium",
     "estilo": "pace",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
       "sprint": 0,
-      "mile": 0,
-      "medium": 3,
-      "long": 2,
-      "front": 1,
-      "pace": 3,
-      "late": 2,
+      "mile": 1,
+      "medium": 6,
+      "long": 5,
+      "front": 4,
+      "pace": 6,
+      "late": 5,
       "end": 0
     },
     "factoresDefault": {
@@ -1932,16 +1932,16 @@
     "distancia": "mile",
     "estilo": "pace",
     "adaptabilidad": {
-      "turf": 3,
-      "dirt": 0,
-      "sprint": 0,
-      "mile": 3,
-      "medium": 2,
-      "long": 2,
-      "front": 0,
-      "pace": 3,
-      "late": 3,
-      "end": 0
+      "turf": 6,
+      "dirt": 3,
+      "sprint": 1,
+      "mile": 6,
+      "medium": 5,
+      "long": 5,
+      "front": 1,
+      "pace": 6,
+      "late": 6,
+      "end": 1
     },
     "factoresDefault": {
       "azul": {
@@ -1975,16 +1975,16 @@
     "distancia": "long",
     "estilo": "late",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
       "sprint": 0,
-      "mile": 0,
-      "medium": 2,
-      "long": 3,
+      "mile": 1,
+      "medium": 5,
+      "long": 6,
       "front": 0,
-      "pace": 1,
-      "late": 3,
-      "end": 1
+      "pace": 4,
+      "late": 6,
+      "end": 4
     },
     "factoresDefault": {
       "azul": {
@@ -2018,16 +2018,16 @@
     "distancia": "medium",
     "estilo": "late",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
-      "sprint": 0,
-      "mile": 2,
-      "medium": 3,
-      "long": 0,
+      "sprint": 3,
+      "mile": 5,
+      "medium": 6,
+      "long": 1,
       "front": 0,
-      "pace": 1,
-      "late": 3,
-      "end": 0
+      "pace": 4,
+      "late": 6,
+      "end": 3
     },
     "factoresDefault": {
       "azul": {
@@ -2058,15 +2058,15 @@
     "distancia": "medium",
     "estilo": "pace",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
       "sprint": 0,
       "mile": 0,
-      "medium": 3,
-      "long": 3,
-      "front": 0,
-      "pace": 3,
-      "late": 2,
+      "medium": 6,
+      "long": 6,
+      "front": 3,
+      "pace": 6,
+      "late": 5,
       "end": 0
     },
     "factoresDefault": {
@@ -2102,15 +2102,15 @@
     "distancia": "medium",
     "estilo": "pace",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
-      "sprint": 0,
-      "mile": 1,
-      "medium": 3,
-      "long": 3,
-      "front": 2,
-      "pace": 3,
-      "late": 1,
+      "sprint": 2,
+      "mile": 4,
+      "medium": 6,
+      "long": 6,
+      "front": 5,
+      "pace": 6,
+      "late": 4,
       "end": 0
     },
     "factoresDefault": {
@@ -2145,16 +2145,16 @@
     "distancia": "mile",
     "estilo": "pace",
     "adaptabilidad": {
-      "turf": 3,
-      "dirt": 3,
-      "sprint": 0,
-      "mile": 3,
-      "medium": 3,
+      "turf": 6,
+      "dirt": 6,
+      "sprint": 1,
+      "mile": 6,
+      "medium": 6,
       "long": 0,
       "front": 0,
-      "pace": 3,
-      "late": 3,
-      "end": 2
+      "pace": 6,
+      "late": 6,
+      "end": 5
     },
     "factoresDefault": {
       "azul": {
@@ -2189,15 +2189,15 @@
     "distancia": "sprint",
     "estilo": "pace",
     "adaptabilidad": {
-      "turf": 3,
-      "dirt": 0,
-      "sprint": 3,
-      "mile": 2,
-      "medium": 0,
+      "turf": 6,
+      "dirt": 1,
+      "sprint": 6,
+      "mile": 5,
+      "medium": 1,
       "long": 0,
-      "front": 2,
-      "pace": 3,
-      "late": 1,
+      "front": 5,
+      "pace": 6,
+      "late": 4,
       "end": 0
     },
     "factoresDefault": {
@@ -2229,16 +2229,16 @@
     "distancia": "medium",
     "estilo": "late",
     "adaptabilidad": {
-      "turf": 3,
-      "dirt": 0,
-      "sprint": 0,
-      "mile": 1,
-      "medium": 3,
-      "long": 3,
+      "turf": 6,
+      "dirt": 1,
+      "sprint": 1,
+      "mile": 4,
+      "medium": 6,
+      "long": 6,
       "front": 0,
-      "pace": 2,
-      "late": 3,
-      "end": 0
+      "pace": 5,
+      "late": 6,
+      "end": 1
     },
     "factoresDefault": {
       "azul": {
@@ -2273,16 +2273,16 @@
     "distancia": "medium",
     "estilo": "pace",
     "adaptabilidad": {
-      "turf": 3,
-      "dirt": 0,
+      "turf": 6,
+      "dirt": 2,
       "sprint": 0,
-      "mile": 0,
-      "medium": 3,
-      "long": 3,
-      "front": 0,
-      "pace": 3,
-      "late": 2,
-      "end": 0
+      "mile": 1,
+      "medium": 6,
+      "long": 6,
+      "front": 1,
+      "pace": 6,
+      "late": 5,
+      "end": 2
     },
     "factoresDefault": {
       "azul": {
@@ -2316,16 +2316,16 @@
     "distancia": "mile",
     "estilo": "end",
     "adaptabilidad": {
-      "turf": 3,
-      "dirt": 0,
-      "sprint": 0,
-      "mile": 3,
-      "medium": 3,
-      "long": 2,
+      "turf": 6,
+      "dirt": 2,
+      "sprint": 3,
+      "mile": 6,
+      "medium": 6,
+      "long": 5,
       "front": 0,
-      "pace": 2,
-      "late": 1,
-      "end": 3
+      "pace": 5,
+      "late": 4,
+      "end": 6
     },
     "factoresDefault": {
       "azul": {
@@ -2360,16 +2360,16 @@
     "distancia": "medium",
     "estilo": "front",
     "adaptabilidad": {
-      "turf": 3,
-      "dirt": 0,
-      "sprint": 0,
-      "mile": 0,
-      "medium": 3,
-      "long": 3,
-      "front": 3,
-      "pace": 3,
-      "late": 2,
-      "end": 2
+      "turf": 6,
+      "dirt": 2,
+      "sprint": 3,
+      "mile": 3,
+      "medium": 6,
+      "long": 6,
+      "front": 6,
+      "pace": 6,
+      "late": 5,
+      "end": 5
     },
     "factoresDefault": {
       "azul": {
@@ -2404,16 +2404,16 @@
     "distancia": "medium",
     "estilo": "end",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
-      "sprint": 0,
-      "mile": 0,
-      "medium": 3,
-      "long": 3,
+      "sprint": 1,
+      "mile": 3,
+      "medium": 6,
+      "long": 6,
       "front": 0,
-      "pace": 0,
-      "late": 2,
-      "end": 3
+      "pace": 1,
+      "late": 5,
+      "end": 6
     },
     "factoresDefault": {
       "azul": {
@@ -2448,16 +2448,16 @@
     "distancia": "medium",
     "estilo": "pace",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
       "sprint": 0,
-      "mile": 0,
-      "medium": 3,
-      "long": 3,
-      "front": 0,
-      "pace": 3,
-      "late": 3,
-      "end": 0
+      "mile": 3,
+      "medium": 6,
+      "long": 6,
+      "front": 1,
+      "pace": 6,
+      "late": 6,
+      "end": 2
     },
     "factoresDefault": {
       "azul": {
@@ -2491,15 +2491,15 @@
     "distancia": "sprint",
     "estilo": "front",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
-      "sprint": 3,
-      "mile": 2,
+      "sprint": 6,
+      "mile": 5,
       "medium": 0,
       "long": 0,
-      "front": 3,
-      "pace": 3,
-      "late": 0,
+      "front": 6,
+      "pace": 6,
+      "late": 1,
       "end": 0
     },
     "factoresDefault": {
@@ -2535,15 +2535,15 @@
     "distancia": "medium",
     "estilo": "late",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
       "sprint": 0,
-      "mile": 0,
-      "medium": 3,
-      "long": 2,
+      "mile": 1,
+      "medium": 6,
+      "long": 5,
       "front": 0,
-      "pace": 2,
-      "late": 3,
+      "pace": 5,
+      "late": 6,
       "end": 0
     },
     "factoresDefault": {
@@ -2579,16 +2579,16 @@
     "distancia": "medium",
     "estilo": "pace",
     "adaptabilidad": {
-      "turf": 3,
+      "turf": 6,
       "dirt": 0,
       "sprint": 0,
-      "mile": 0,
-      "medium": 3,
-      "long": 2,
-      "front": 0,
-      "pace": 3,
-      "late": 2,
-      "end": 0
+      "mile": 3,
+      "medium": 6,
+      "long": 5,
+      "front": 2,
+      "pace": 6,
+      "late": 5,
+      "end": 1
     },
     "factoresDefault": {
       "azul": {

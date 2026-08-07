@@ -9,7 +9,7 @@ const API_BASE = 'https://umaapi.vercel.app/api';
 const CONCURRENCY = 4;
 const RETRIES = 3;
 
-const GRADE_VALUE = { A: 3, B: 2, C: 1, D: 0, E: 0, F: 0, G: 0 };
+const GRADE_VALUE = { S: 7, A: 6, B: 5, C: 4, D: 3, E: 2, F: 1, G: 0 };
 const DISTANCE_ORDER = ['sprint', 'mile', 'medium', 'long'];
 const STYLE_ORDER = ['front', 'pace', 'late', 'end'];
 const STAT_MAP = { spd: 'speed', sta: 'stamina', pow: 'power', gut: 'guts', wit: 'wit' };

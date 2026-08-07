@@ -15,7 +15,7 @@ const blueTypes = new Set(['speed', 'stamina', 'power', 'guts', 'wit']);
 const adaptationKeys = ['turf', 'dirt', 'sprint', 'mile', 'medium', 'long', 'front', 'pace', 'late', 'end'];
 
 const isStars = (value) => Number.isInteger(value) && value >= 0 && value <= 3;
-const isAdaptability = (value) => Number.isInteger(value) && value >= 0 && value <= 3;
+const isAdaptability = (value) => Number.isInteger(value) && value >= 0 && value <= 7;
 
 if (!Array.isArray(characters) || characters.length === 0) {
   errors.push('characters.json debe ser un array no vacío.');

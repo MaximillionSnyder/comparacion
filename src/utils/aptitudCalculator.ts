@@ -1,9 +1,16 @@
 import type { Arbol, Adaptabilidad, TipoFactorRojo } from '../types';
 import { POSICIONES_ABUELOS } from '../types';
 
-export const GRADES = ['G', 'F', 'C', 'A'] as const;
+export const GRADES = ['G', 'F', 'E', 'D', 'C', 'B', 'A', 'S'] as const;
 
-export type NivelAptitud = 0 | 1 | 2 | 3;
+export type NivelAptitud = number;
+
+/** Índice del tope alcanzable por factor rojo (la herencia de aptitud no sube hasta S). */
+export const INDICE_APTITUD_TOPE = GRADES.indexOf('A');
+
+export const INDICE_GRADO: Record<string, number> = Object.fromEntries(
+  GRADES.map((grade, index) => [grade, index]),
+);
 
 export interface ResultadoAptitud {
   tipos: TipoAptitudResultado[];
@@ -80,7 +87,7 @@ export function calcularAptitud(arbol: Arbol): ResultadoAptitud {
     const base = objetivo.adaptabilidad[clave] as NivelAptitud;
     const estrellas = estrellasPorTipo[tipo];
     const subida = getSubida(estrellas);
-    const final = Math.min(base + subida, 3) as NivelAptitud;
+    const final = Math.min(base + subida, INDICE_APTITUD_TOPE) as NivelAptitud;
     return {
       tipo,
       label,

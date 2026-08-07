@@ -4,7 +4,11 @@ import type { Adaptabilidad, Arbol, Personaje, RangoAfinidad, ResultadoAfinidad 
 const ADAPT_KEYS = Object.keys((characters as Personaje[])[0]?.adaptabilidad ?? {}) as (keyof Adaptabilidad)[];
 
 const PUNTOS_GRUPO_APTITUD = 7;
-const APTITUD_MINIMA_GRUPO = 2;
+// La pertenencia real a un grupo de aptitud viene de una tabla oculta del juego
+// (succession_relation_member) que no expone la API. Como aproximación, un personaje
+// pertenece al grupo si su grado es >= B (índice 5). No es exacto: p. ej. Bourbon (短距離C)
+// sí pertenece al grupo según el datamined, pero no lo derivamos de grados.
+const APTITUD_MINIMA_GRUPO = 5;
 const PUNTOS_DORM = 2;
 const PUNTOS_GRADO = 2;
 const PUNTOS_GRUPO = 1;

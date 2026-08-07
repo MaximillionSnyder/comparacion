@@ -44,7 +44,8 @@ describe('affinity formula', () => {
     expect(getAffinityScore(a.id, b.id)).toBe(afinidadPar(a, b));
   });
 
-  it('awards aptitude groups (7pt each) plus common bonuses', () => {
+  it('awards aptitude groups (7) for shared grades >= B (min group aptitude)', () => {
+    const MIN_GRUPO = 5; // índice de 'B'
     const a = personajes[0];
     const c = personajes.find((p) => p.id === 'mcq')!;
     const apts = () => {
@@ -52,7 +53,7 @@ describe('affinity formula', () => {
         ...(Object.keys(a.adaptabilidad) as (keyof typeof a.adaptabilidad)[]),
       ];
       return adapt.filter(
-        (k) => a.adaptabilidad[k] >= 2 && c.adaptabilidad[k] >= 2,
+        (k) => a.adaptabilidad[k] >= MIN_GRUPO && c.adaptabilidad[k] >= MIN_GRUPO,
       ).length * 7;
     };
     const sameDormBonus = a.afinidad?.dorm && a.afinidad.dorm === c.afinidad?.dorm ? 2 : 0;

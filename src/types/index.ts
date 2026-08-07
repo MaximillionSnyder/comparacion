@@ -34,17 +34,19 @@ export interface FactoresDefault {
   verde: FactorVerde;
 }
 
+export type NivelAptitud = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7;
+
 export interface Adaptabilidad {
-  turf: 0 | 1 | 2 | 3;
-  dirt: 0 | 1 | 2 | 3;
-  sprint: 0 | 1 | 2 | 3;
-  mile: 0 | 1 | 2 | 3;
-  medium: 0 | 1 | 2 | 3;
-  long: 0 | 1 | 2 | 3;
-  front: 0 | 1 | 2 | 3;
-  pace: 0 | 1 | 2 | 3;
-  late: 0 | 1 | 2 | 3;
-  end: 0 | 1 | 2 | 3;
+  turf: NivelAptitud;
+  dirt: NivelAptitud;
+  sprint: NivelAptitud;
+  mile: NivelAptitud;
+  medium: NivelAptitud;
+  long: NivelAptitud;
+  front: NivelAptitud;
+  pace: NivelAptitud;
+  late: NivelAptitud;
+  end: NivelAptitud;
 }
 
 export type Dormitorio = 'ritto' | 'miho' | 'solo';
